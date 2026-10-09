@@ -1,0 +1,29 @@
+{
+  "app_id": "support_ticket_chatbot",
+  "name": "Customer Support Ticket Chatbot",
+  "purpose": "Automate customer support ticket resolution and account balance queries",
+  "kind": "tool_calling_agent",
+  "data_handled": [
+    "PII",
+    "Customer_Tickets"
+  ],
+  "roles": [
+    "anonymous",
+    "customer",
+    "support_agent",
+    "admin"
+  ],
+  "residency_rules": {
+    "US": [
+      "us-east-1"
+    ]
+  },
+  "retention_days": {
+    "app_log": 60,
+    "audit_log": 180
+  },
+  "policy_locations": [
+    "config/agent_tool_permissions.json"
+  ],
+  "audit_level": "L2 Trace"
+}

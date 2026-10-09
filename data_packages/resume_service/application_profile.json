@@ -1,0 +1,30 @@
+{
+  "app_id": "resume_jd_screening_bot",
+  "name": "Resume & JD Screening Bot",
+  "purpose": "Screen candidate resumes and match against JD requirements",
+  "kind": "rag_app",
+  "data_handled": [
+    "PII",
+    "HR_salary",
+    "EU_candidate_records"
+  ],
+  "roles": [
+    "intern",
+    "recruiter",
+    "hr_admin"
+  ],
+  "residency_rules": {
+    "EU": [
+      "eu-west-1"
+    ]
+  },
+  "retention_days": {
+    "app_log": 30,
+    "audit_log": 90
+  },
+  "policy_locations": [
+    "config/rbac_rules.json",
+    "config/vector_index.json"
+  ],
+  "audit_level": "L3 Config"
+}

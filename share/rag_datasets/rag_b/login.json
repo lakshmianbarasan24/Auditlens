@@ -1,0 +1,140 @@
+{
+  "flow": "login",
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "path": "/auth/login",
+        "role": "anonymous",
+        "body": {
+          "username": "cust_acme",
+          "password": "***"
+        }
+      },
+      "response": {
+        "status": 401,
+        "headers": {
+          "X-Request-ID": "dd4a7c63890135436f6c7b8759ed7f95"
+        },
+        "body": {
+          "detail": "Incorrect username or password"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/auth/login",
+        "role": "anonymous",
+        "body": {
+          "username": "cust_acme",
+          "password": "***"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "3306605e3d555ccf49b7a7d01fcf44e2"
+        },
+        "body": {
+          "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdXN0X2FjbWUiLCJyb2xlIjoiY3VzdG9tZXIiLCJleHAiOjE3OTE1Mjc0MDB9.NvGz_aPfbit8oKgJkPYRLmF0MkM99zkTRvy6JmG_hIw",
+          "token_type": "bearer",
+          "role": "customer",
+          "tenant": "acme-corp"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/auth/login",
+        "role": "anonymous",
+        "body": {
+          "username": "cust_globex",
+          "password": "***"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "3b34abe125c60e64f976eaf1a3c96b14"
+        },
+        "body": {
+          "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdXN0X2dsb2JleCIsInJvbGUiOiJjdXN0b21lciIsImV4cCI6MTc5MTUyNzQwMH0.CKav0DLp1QZ8gin6IiLQoNoqqt6FbUaivDsWjrH2lxg",
+          "token_type": "bearer",
+          "role": "customer",
+          "tenant": "globex"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/auth/login",
+        "role": "anonymous",
+        "body": {
+          "username": "cust_initech",
+          "password": "***"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "b6e39f1065ad9b6262ed17cc39a141e1"
+        },
+        "body": {
+          "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjdXN0X2luaXRlY2giLCJyb2xlIjoiY3VzdG9tZXIiLCJleHAiOjE3OTE1Mjc0MDB9.Pt5jbjjV1CqYXn2sD1Pj44K3tFxwxNRXlmims9Y8nRI",
+          "token_type": "bearer",
+          "role": "customer",
+          "tenant": "initech"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/auth/login",
+        "role": "anonymous",
+        "body": {
+          "username": "agent_ravi",
+          "password": "***"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "2c349c3731c530a64ed07c9c9522ecab"
+        },
+        "body": {
+          "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZ2VudF9yYXZpIiwicm9sZSI6ImFnZW50IiwiZXhwIjoxNzkxNTI3NDAwfQ.774P9uTp4mbnS-4WW26swDAEm8YCh9ZQv0euCLYMz38",
+          "token_type": "bearer",
+          "role": "agent",
+          "tenant": "support"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/auth/login",
+        "role": "anonymous",
+        "body": {
+          "username": "admin_root",
+          "password": "***"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "1d3d28959de2be9d5cb7326ed35ab2eb"
+        },
+        "body": {
+          "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbl9yb290Iiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzkxNTI3NDAwfQ.An_Y1c5QT5WiNF277C-xMfFT-mAX32OhP7nh2dOr-f0",
+          "token_type": "bearer",
+          "role": "admin",
+          "tenant": "support"
+        }
+      }
+    }
+  ]
+}

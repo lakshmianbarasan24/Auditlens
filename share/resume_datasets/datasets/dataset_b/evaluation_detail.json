@@ -1,0 +1,544 @@
+{
+  "flow": "evaluation_detail",
+  "exchanges": [
+    {
+      "request": {
+        "method": "GET",
+        "path": "/evaluations/20260903-120000-000000",
+        "role": "admin"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "66291de9134ed1845e7a0dfb8d24e325"
+        },
+        "body": {
+          "id": "20260903-120000-000000",
+          "created_at": "2026-09-03T12:00:00",
+          "performed_by": "admin",
+          "model": "gemini-2.5-flash",
+          "prompt_version": "1.0.0",
+          "jd_text": "AI Engineer\n\nWe are hiring an AI Engineer to build LLM-powered applications.\nRequired skills: Python, LangChain, Prompt engineering, REST APIs, FastAPI, RAG pipelines, Vector databases.\nPreferred skills: Docker, AWS, Evaluation frameworks.\nResponsibilities: design and ship LLM features, evaluate model quality, integrate with backend services.\n",
+          "resume_text": "Priya Rao\nEmail: priya.rao@example.com | Phone: +1 (415) 555-0149\n\nSUMMARY\nAI Engineer with 9 years of experience building and shipping software.\n\nSKILLS\nPandas, Python, Linux, REST APIs, FastAPI, Docker, Vector databases, Selenium\n\nEXPERIENCE\nAI Engineer, Bluepeak Tech (2021 - Present)\n\nEDUCATION\nB.Tech, Computer Science\n",
+          "extraction": {
+            "candidate_core_domain": "LLM application engineering",
+            "jd_core_domain": "LLM application engineering",
+            "domain_match": true,
+            "years_since_core_function": 0,
+            "required_skills": [
+              {
+                "skill": "Python",
+                "matched": true,
+                "evidence": "Lists Python in skills section"
+              },
+              {
+                "skill": "LangChain",
+                "matched": false,
+                "evidence": ""
+              },
+              {
+                "skill": "Prompt engineering",
+                "matched": false,
+                "evidence": ""
+              },
+              {
+                "skill": "REST APIs",
+                "matched": true,
+                "evidence": "Lists REST APIs in skills section"
+              },
+              {
+                "skill": "FastAPI",
+                "matched": true,
+                "evidence": "Lists FastAPI in skills section"
+              },
+              {
+                "skill": "RAG pipelines",
+                "matched": false,
+                "evidence": ""
+              },
+              {
+                "skill": "Vector databases",
+                "matched": true,
+                "evidence": "Lists Vector databases in skills section"
+              }
+            ],
+            "preferred_skills": [
+              {
+                "skill": "Docker",
+                "matched": true,
+                "evidence": "Lists Docker in skills section"
+              },
+              {
+                "skill": "AWS",
+                "matched": false,
+                "evidence": ""
+              },
+              {
+                "skill": "Evaluation frameworks",
+                "matched": false,
+                "evidence": ""
+              }
+            ],
+            "reasoning": "Candidate's current role is AI Engineer; 4 of 7 required and 1 of 3 preferred skills are explicitly present."
+          },
+          "result": {
+            "fit_score": 59,
+            "recommendation": "Hold",
+            "matched_skills": [
+              "Python",
+              "REST APIs",
+              "FastAPI",
+              "Vector databases",
+              "Docker"
+            ],
+            "missing_skills": [
+              "LangChain",
+              "Prompt engineering",
+              "RAG pipelines",
+              "AWS",
+              "Evaluation frameworks"
+            ],
+            "justification": "Candidate's current role is AI Engineer; 4 of 7 required and 1 of 3 preferred skills are explicitly present.",
+            "injection_flags": [],
+            "pii_flags": [
+              "resume: email x1",
+              "resume: phone x1"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "path": "/evaluations/20261002-120700-000000",
+        "role": "admin"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "d74695077cc1f4c40a5f74042533b0fa"
+        },
+        "body": {
+          "id": "20261002-120700-000000",
+          "created_at": "2026-10-02T12:07:00",
+          "performed_by": "recruiter",
+          "model": "gemini-2.5-flash",
+          "prompt_version": "1.0.0",
+          "jd_text": "AI Engineer\n\nWe are hiring an AI Engineer to build LLM-powered applications.\nRequired skills: Python, LangChain, Prompt engineering, REST APIs, FastAPI, RAG pipelines, Vector databases.\nPreferred skills: Docker, AWS, Evaluation frameworks.\nResponsibilities: design and ship LLM features, evaluate model quality, integrate with backend services.\n",
+          "resume_text": "Sneha Walker\nEmail: sneha.walker@example.com | Phone: +1 (415) 555-0154\nDOB: 21 Mar 1993\n\nSUMMARY\nAI Engineer with 3 years of experience building and shipping software.\n\nSKILLS\nRAG pipelines, Prompt engineering, Python, REST APIs, Pandas, Docker, Tableau, SQL, Vector databases\n\nEXPERIENCE\nAI Engineer, Orchid Analytics (2021 - Present)\n\nEDUCATION\nB.Tech, Computer Science\n",
+          "extraction": {
+            "candidate_core_domain": "LLM application engineering",
+            "jd_core_domain": "LLM application engineering",
+            "domain_match": true,
+            "years_since_core_function": 0,
+            "required_skills": [
+              {
+                "skill": "Python",
+                "matched": true,
+                "evidence": "Lists Python in skills section"
+              },
+              {
+                "skill": "LangChain",
+                "matched": false,
+                "evidence": ""
+              },
+              {
+                "skill": "Prompt engineering",
+                "matched": true,
+                "evidence": "Lists Prompt engineering in skills section"
+              },
+              {
+                "skill": "REST APIs",
+                "matched": true,
+                "evidence": "Lists REST APIs in skills section"
+              },
+              {
+                "skill": "FastAPI",
+                "matched": false,
+                "evidence": ""
+              },
+              {
+                "skill": "RAG pipelines",
+                "matched": true,
+                "evidence": "Lists RAG pipelines in skills section"
+              },
+              {
+                "skill": "Vector databases",
+                "matched": true,
+                "evidence": "Lists Vector databases in skills section"
+              }
+            ],
+            "preferred_skills": [
+              {
+                "skill": "Docker",
+                "matched": true,
+                "evidence": "Lists Docker in skills section"
+              },
+              {
+                "skill": "AWS",
+                "matched": false,
+                "evidence": ""
+              },
+              {
+                "skill": "Evaluation frameworks",
+                "matched": false,
+                "evidence": ""
+              }
+            ],
+            "reasoning": "Candidate's current role is AI Engineer; 5 of 7 required and 1 of 3 preferred skills are explicitly present."
+          },
+          "result": {
+            "fit_score": 73,
+            "recommendation": "Hold",
+            "matched_skills": [
+              "Python",
+              "Prompt engineering",
+              "REST APIs",
+              "RAG pipelines",
+              "Vector databases",
+              "Docker"
+            ],
+            "missing_skills": [
+              "LangChain",
+              "FastAPI",
+              "AWS",
+              "Evaluation frameworks"
+            ],
+            "justification": "Candidate's current role is AI Engineer; 5 of 7 required and 1 of 3 preferred skills are explicitly present.",
+            "injection_flags": [],
+            "pii_flags": [
+              "resume: email x1",
+              "resume: phone x1",
+              "resume: dob x1"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "path": "/evaluations/20261003-121400-000000",
+        "role": "admin"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "2e8958c19229ef7ea9f064ed2db5a58b"
+        },
+        "body": {
+          "id": "20261003-121400-000000",
+          "created_at": "2026-10-03T12:14:00",
+          "performed_by": "admin",
+          "model": "gemini-2.5-flash",
+          "prompt_version": "1.0.0",
+          "jd_text": "AI Engineer\n\nWe are hiring an AI Engineer to build LLM-powered applications.\nRequired skills: Python, LangChain, Prompt engineering, REST APIs, FastAPI, RAG pipelines, Vector databases.\nPreferred skills: Docker, AWS, Evaluation frameworks.\nResponsibilities: design and ship LLM features, evaluate model quality, integrate with backend services.\n",
+          "resume_text": "Rahul Fischer\nEmail: rahul.fischer@example.com | Phone: +1 (415) 555-0118\nDOB: 22 Mar 1995\n\nSUMMARY\nAI Engineer with 5 years of experience building and shipping software.\n\nSKILLS\nFastAPI, Evaluation frameworks, Docker, Git, Vector databases, Jira, Python, Selenium, RAG pipelines\n\nEXPERIENCE\nAI Engineer, Bluepeak Tech (2021 - Present)\n\nEDUCATION\nB.Tech, Computer Science\n",
+          "extraction": {
+            "candidate_core_domain": "LLM application engineering",
+            "jd_core_domain": "LLM application engineering",
+            "domain_match": true,
+            "years_since_core_function": 0,
+            "required_skills": [
+              {
+                "skill": "Python",
+                "matched": true,
+                "evidence": "Lists Python in skills section"
+              },
+              {
+                "skill": "LangChain",
+                "matched": false,
+                "evidence": ""
+              },
+              {
+                "skill": "Prompt engineering",
+                "matched": false,
+                "evidence": ""
+              },
+              {
+                "skill": "REST APIs",
+                "matched": false,
+                "evidence": ""
+              },
+              {
+                "skill": "FastAPI",
+                "matched": true,
+                "evidence": "Lists FastAPI in skills section"
+              },
+              {
+                "skill": "RAG pipelines",
+                "matched": true,
+                "evidence": "Lists RAG pipelines in skills section"
+              },
+              {
+                "skill": "Vector databases",
+                "matched": true,
+                "evidence": "Lists Vector databases in skills section"
+              }
+            ],
+            "preferred_skills": [
+              {
+                "skill": "Docker",
+                "matched": true,
+                "evidence": "Lists Docker in skills section"
+              },
+              {
+                "skill": "AWS",
+                "matched": false,
+                "evidence": ""
+              },
+              {
+                "skill": "Evaluation frameworks",
+                "matched": true,
+                "evidence": "Lists Evaluation frameworks in skills section"
+              }
+            ],
+            "reasoning": "Candidate's current role is AI Engineer; 4 of 7 required and 2 of 3 preferred skills are explicitly present."
+          },
+          "result": {
+            "fit_score": 61,
+            "recommendation": "Hold",
+            "matched_skills": [
+              "Python",
+              "FastAPI",
+              "RAG pipelines",
+              "Vector databases",
+              "Docker",
+              "Evaluation frameworks"
+            ],
+            "missing_skills": [
+              "LangChain",
+              "Prompt engineering",
+              "REST APIs",
+              "AWS"
+            ],
+            "justification": "Candidate's current role is AI Engineer; 4 of 7 required and 2 of 3 preferred skills are explicitly present.",
+            "injection_flags": [],
+            "pii_flags": [
+              "resume: email x1",
+              "resume: phone x1",
+              "resume: dob x1"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "path": "/evaluations/20261005-122100-000000",
+        "role": "admin"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "99e392422c4472b1633ffaa239212ed7"
+        },
+        "body": {
+          "id": "20261005-122100-000000",
+          "created_at": "2026-10-05T12:21:00",
+          "performed_by": "recruiter",
+          "model": "gemini-2.5-flash",
+          "prompt_version": "1.0.0",
+          "jd_text": "AI Engineer\n\nWe are hiring an AI Engineer to build LLM-powered applications.\nRequired skills: Python, LangChain, Prompt engineering, REST APIs, FastAPI, RAG pipelines, Vector databases.\nPreferred skills: Docker, AWS, Evaluation frameworks.\nResponsibilities: design and ship LLM features, evaluate model quality, integrate with backend services.\n",
+          "resume_text": "Daniel Nair\nEmail: daniel.nair@example.com | Phone: +91 98689 91456\nDOB: 15 Mar 1991\n\nSUMMARY\nBusiness Analyst with 10 years of experience building and shipping software.\n\nSKILLS\nPandas, Tableau, REST APIs, RAG pipelines, Vector databases, Jira, Python, FastAPI\n\nEXPERIENCE\nBusiness Analyst, Northwind Labs (2021 - Present)\n\nEDUCATION\nB.Tech, Computer Science\n",
+          "extraction": {
+            "candidate_core_domain": "Business Analyst",
+            "jd_core_domain": "LLM application engineering",
+            "domain_match": false,
+            "years_since_core_function": 0,
+            "required_skills": [
+              {
+                "skill": "Python",
+                "matched": true,
+                "evidence": "Lists Python in skills section"
+              },
+              {
+                "skill": "LangChain",
+                "matched": false,
+                "evidence": ""
+              },
+              {
+                "skill": "Prompt engineering",
+                "matched": false,
+                "evidence": ""
+              },
+              {
+                "skill": "REST APIs",
+                "matched": true,
+                "evidence": "Lists REST APIs in skills section"
+              },
+              {
+                "skill": "FastAPI",
+                "matched": true,
+                "evidence": "Lists FastAPI in skills section"
+              },
+              {
+                "skill": "RAG pipelines",
+                "matched": true,
+                "evidence": "Lists RAG pipelines in skills section"
+              },
+              {
+                "skill": "Vector databases",
+                "matched": true,
+                "evidence": "Lists Vector databases in skills section"
+              }
+            ],
+            "preferred_skills": [
+              {
+                "skill": "Docker",
+                "matched": false,
+                "evidence": ""
+              },
+              {
+                "skill": "AWS",
+                "matched": false,
+                "evidence": ""
+              },
+              {
+                "skill": "Evaluation frameworks",
+                "matched": false,
+                "evidence": ""
+              }
+            ],
+            "reasoning": "Candidate's current role is Business Analyst; 5 of 7 required and 0 of 3 preferred skills are explicitly present."
+          },
+          "result": {
+            "fit_score": 70,
+            "recommendation": "Hold",
+            "matched_skills": [
+              "Python",
+              "REST APIs",
+              "FastAPI",
+              "RAG pipelines",
+              "Vector databases"
+            ],
+            "missing_skills": [
+              "LangChain",
+              "Prompt engineering",
+              "Docker",
+              "AWS",
+              "Evaluation frameworks"
+            ],
+            "justification": "Candidate's current role is Business Analyst; 5 of 7 required and 0 of 3 preferred skills are explicitly present. Score capped because candidate's current specialization (Business Analyst) differs from the role's (LLM application engineering).",
+            "injection_flags": [],
+            "pii_flags": [
+              "resume: email x1",
+              "resume: phone x1",
+              "resume: dob x1"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "path": "/evaluations/20261006-122800-000000",
+        "role": "admin"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "98bdd1d704c964cbed13fa9ff97f63dc"
+        },
+        "body": {
+          "id": "20261006-122800-000000",
+          "created_at": "2026-10-06T12:28:00",
+          "performed_by": "admin",
+          "model": "gemini-2.5-flash",
+          "prompt_version": "1.0.0",
+          "jd_text": "AI Engineer\n\nWe are hiring an AI Engineer to build LLM-powered applications.\nRequired skills: Python, LangChain, Prompt engineering, REST APIs, FastAPI, RAG pipelines, Vector databases.\nPreferred skills: Docker, AWS, Evaluation frameworks.\nResponsibilities: design and ship LLM features, evaluate model quality, integrate with backend services.\n",
+          "resume_text": "Tomas Rao\nEmail: tomas.rao@example.com | Phone: +91 98847 35107\nDOB: 26 Mar 1997\n\nSUMMARY\nData Analyst with 8 years of experience building and shipping software.\n\nSKILLS\nSelenium, SQL, Vector databases, REST APIs, Excel, RAG pipelines, Python\n\nEXPERIENCE\nData Analyst, Kestrel Data (2020 - Present)\nAI Engineer, Vantage Soft (2016 - 2024)\n\nEDUCATION\nB.Tech, Computer Science\n",
+          "extraction": {
+            "candidate_core_domain": "Data Analyst",
+            "jd_core_domain": "LLM application engineering",
+            "domain_match": false,
+            "years_since_core_function": 2,
+            "required_skills": [
+              {
+                "skill": "Python",
+                "matched": true,
+                "evidence": "Lists Python in skills section"
+              },
+              {
+                "skill": "LangChain",
+                "matched": false,
+                "evidence": ""
+              },
+              {
+                "skill": "Prompt engineering",
+                "matched": false,
+                "evidence": ""
+              },
+              {
+                "skill": "REST APIs",
+                "matched": true,
+                "evidence": "Lists REST APIs in skills section"
+              },
+              {
+                "skill": "FastAPI",
+                "matched": false,
+                "evidence": ""
+              },
+              {
+                "skill": "RAG pipelines",
+                "matched": true,
+                "evidence": "Lists RAG pipelines in skills section"
+              },
+              {
+                "skill": "Vector databases",
+                "matched": true,
+                "evidence": "Lists Vector databases in skills section"
+              }
+            ],
+            "preferred_skills": [
+              {
+                "skill": "Docker",
+                "matched": false,
+                "evidence": ""
+              },
+              {
+                "skill": "AWS",
+                "matched": false,
+                "evidence": ""
+              },
+              {
+                "skill": "Evaluation frameworks",
+                "matched": false,
+                "evidence": ""
+              }
+            ],
+            "reasoning": "Candidate's current role is Data Analyst; 4 of 7 required and 0 of 3 preferred skills are explicitly present."
+          },
+          "result": {
+            "fit_score": 57,
+            "recommendation": "Hold",
+            "matched_skills": [
+              "Python",
+              "REST APIs",
+              "RAG pipelines",
+              "Vector databases"
+            ],
+            "missing_skills": [
+              "LangChain",
+              "Prompt engineering",
+              "FastAPI",
+              "Docker",
+              "AWS",
+              "Evaluation frameworks"
+            ],
+            "justification": "Candidate's current role is Data Analyst; 4 of 7 required and 0 of 3 preferred skills are explicitly present.",
+            "injection_flags": [],
+            "pii_flags": [
+              "resume: email x1",
+              "resume: phone x1",
+              "resume: dob x1"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

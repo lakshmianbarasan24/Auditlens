@@ -1,0 +1,36 @@
+[
+  {
+    "exchange_id": "sup-001",
+    "flow_name": "support_ticket_resolution",
+    "role": "customer",
+    "request_prompt": "What is the status of ticket #9941?",
+    "user_metadata": {
+      "user_id": "cust_88",
+      "region": "US",
+      "faithfulness_score": 0.95
+    },
+    "response_text": "Ticket #9941 is currently in progress with Tier 2 support.",
+    "retrieved_chunks": [
+      {
+        "chunk_id": "tkt-9941",
+        "content": "Ticket #9941 status: In progress, assigned to Tier 2."
+      }
+    ],
+    "tool_calls": [
+      {
+        "tool_name": "get_ticket_status",
+        "args": {
+          "ticket_id": 9941
+        }
+      }
+    ],
+    "app_log_lines": [
+      "2026-10-09 12:00:00 INFO Customer cust_88 queried ticket 9941"
+    ],
+    "audit_log_entry": {
+      "timestamp": "2026-10-09T12:00:00Z",
+      "action": "TOOL_CALL",
+      "user": "cust_88"
+    }
+  }
+]

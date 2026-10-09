@@ -1,0 +1,23 @@
+{
+  "flow": "access_replay",
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "path": "/compliance/access-replay",
+        "role": "admin"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "b1131d1044ef495ffd39045d517ac9ec"
+        },
+        "body": {
+          "status": "pass",
+          "requests_checked": 40,
+          "violations": []
+        }
+      }
+    }
+  ]
+}

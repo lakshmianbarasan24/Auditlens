@@ -1,0 +1,40 @@
+{
+  "flow": "access_replay",
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "path": "/compliance/access-replay",
+        "role": "admin"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "387b93546ad65bd3621acf3caae3e565"
+        },
+        "body": {
+          "status": "fail",
+          "requests_checked": 40,
+          "violations": [
+            {
+              "entry": 41,
+              "kind": "wrongly_allowed",
+              "role": "anonymous",
+              "method": "GET",
+              "path": "/evaluations",
+              "status": 200
+            },
+            {
+              "entry": 59,
+              "kind": "wrongly_allowed",
+              "role": "recruiter",
+              "method": "GET",
+              "path": "/compliance/audit-log",
+              "status": 200
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

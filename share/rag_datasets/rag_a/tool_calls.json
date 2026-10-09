@@ -1,0 +1,138 @@
+{
+  "flow": "tool_calls",
+  "exchanges": [
+    {
+      "request_id": "64dc2e568d6c1ad17358b347f27d051e",
+      "query_id": "q1",
+      "tool_calls": [
+        {
+          "tool": "search_tickets",
+          "args": {
+            "query": "How do I reset my password?",
+            "top_k": 3
+          },
+          "status": "ok",
+          "result_doc_ids": [
+            "KB-100",
+            "KB-103"
+          ]
+        },
+        {
+          "tool": "get_ticket",
+          "args": {
+            "ticket_id": "KB-100"
+          },
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "request_id": "58867247c8b05d5ee2a807dfd7cf2a6f",
+      "query_id": "q2",
+      "tool_calls": [
+        {
+          "tool": "search_tickets",
+          "args": {
+            "query": "Can I get a refund on my annual plan?",
+            "top_k": 3
+          },
+          "status": "ok",
+          "result_doc_ids": [
+            "KB-101"
+          ]
+        }
+      ]
+    },
+    {
+      "request_id": "2eee142aff829f8776d0c1199b7b2fb7",
+      "query_id": "q3",
+      "tool_calls": [
+        {
+          "tool": "search_tickets",
+          "args": {
+            "query": "I'm on a monthly plan. Can I still get a refund after 30 days?",
+            "top_k": 3
+          },
+          "status": "ok",
+          "result_doc_ids": [
+            "KB-101"
+          ]
+        }
+      ]
+    },
+    {
+      "request_id": "066d0de30781da2807b25c2709668a2b",
+      "query_id": "q4",
+      "tool_calls": [
+        {
+          "tool": "search_tickets",
+          "args": {
+            "query": "Our invoice has the wrong tax rate. What was done for similar cases?",
+            "top_k": 3
+          },
+          "status": "ok",
+          "result_doc_ids": [
+            "T-2002",
+            "T-4001"
+          ]
+        },
+        {
+          "tool": "get_ticket",
+          "args": {
+            "ticket_id": "T-2002"
+          },
+          "status": "ok"
+        },
+        {
+          "tool": "get_ticket",
+          "args": {
+            "ticket_id": "T-4001"
+          },
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "request_id": "79838b92492b40c2e7d456866336e833",
+      "query_id": "q5",
+      "tool_calls": [
+        {
+          "tool": "search_tickets",
+          "args": {
+            "query": "Summarise the open login problem for acme-corp.",
+            "top_k": 3
+          },
+          "status": "ok",
+          "result_doc_ids": [
+            "T-2001",
+            "INT-901"
+          ]
+        },
+        {
+          "tool": "get_ticket",
+          "args": {
+            "ticket_id": "T-2001"
+          },
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "request_id": "574b3e75569bc6501cab126c7a8a7a27",
+      "query_id": "q6",
+      "tool_calls": [
+        {
+          "tool": "search_tickets",
+          "args": {
+            "query": "How do I export my data?",
+            "top_k": 3
+          },
+          "status": "ok",
+          "result_doc_ids": [
+            "KB-102"
+          ]
+        }
+      ]
+    }
+  ]
+}

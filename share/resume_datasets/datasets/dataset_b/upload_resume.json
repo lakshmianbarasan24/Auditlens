@@ -1,0 +1,123 @@
+{
+  "flow": "upload_resume",
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "path": "/upload-resume",
+        "role": "admin",
+        "body": {
+          "file": "payload.exe"
+        }
+      },
+      "response": {
+        "status": 400,
+        "headers": {
+          "X-Request-ID": "fbd0b1697cef6cc41311c7bbe99f5a7a"
+        },
+        "body": {
+          "detail": "Unsupported file type: .exe"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/upload-resume",
+        "role": "anonymous",
+        "body": {
+          "file": "resume.pdf"
+        }
+      },
+      "response": {
+        "status": 401,
+        "headers": {
+          "X-Request-ID": "80702a04223907e5730472ba40ab9ba0"
+        },
+        "body": {
+          "detail": "Not authenticated"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/upload-resume",
+        "role": "recruiter",
+        "body": {
+          "file": "AI_Engineer_Sneha_Walker.txt"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "4c787484cdeb4227868e55a1e86d68c9"
+        },
+        "body": {
+          "filename": "AI_Engineer_Sneha_Walker.txt",
+          "resume_text": "Sneha Walker\nEmail: sneha.walker@example.com | Phone: +1 (415) 555-0154\nDOB: 21 Mar 1993\n\nSUMMARY\nAI Engineer with 3 years of experience building and shipping software.\n\nSKILLS\nRAG pipelines, Prompt engineering, Python, REST APIs, Pandas, Docker, Tableau, SQL, Vector databases\n\nEXPERIENCE\nAI Engineer, Orchid Analytics (2021 - Present)\n\nEDUCATION\nB.Tech, Computer Science\n"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/upload-resume",
+        "role": "admin",
+        "body": {
+          "file": "AI_Engineer_Rahul_Fischer.txt"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "e822e923f85108839ebeb78c1840ceaf"
+        },
+        "body": {
+          "filename": "AI_Engineer_Rahul_Fischer.txt",
+          "resume_text": "Rahul Fischer\nEmail: rahul.fischer@example.com | Phone: +1 (415) 555-0118\nDOB: 22 Mar 1995\n\nSUMMARY\nAI Engineer with 5 years of experience building and shipping software.\n\nSKILLS\nFastAPI, Evaluation frameworks, Docker, Git, Vector databases, Jira, Python, Selenium, RAG pipelines\n\nEXPERIENCE\nAI Engineer, Bluepeak Tech (2021 - Present)\n\nEDUCATION\nB.Tech, Computer Science\n"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/upload-resume",
+        "role": "recruiter",
+        "body": {
+          "file": "Business_Analyst_Daniel_Nair.txt"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "a50d4c8a4babe09a860a1d66146415bb"
+        },
+        "body": {
+          "filename": "Business_Analyst_Daniel_Nair.txt",
+          "resume_text": "Daniel Nair\nEmail: daniel.nair@example.com | Phone: +91 98689 91456\nDOB: 15 Mar 1991\n\nSUMMARY\nBusiness Analyst with 10 years of experience building and shipping software.\n\nSKILLS\nPandas, Tableau, REST APIs, RAG pipelines, Vector databases, Jira, Python, FastAPI\n\nEXPERIENCE\nBusiness Analyst, Northwind Labs (2021 - Present)\n\nEDUCATION\nB.Tech, Computer Science\n"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/upload-resume",
+        "role": "admin",
+        "body": {
+          "file": "Data_Analyst_Tomas_Rao.txt"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "7078aa29c92169d9d85966cffccc42b4"
+        },
+        "body": {
+          "filename": "Data_Analyst_Tomas_Rao.txt",
+          "resume_text": "Tomas Rao\nEmail: tomas.rao@example.com | Phone: +91 98847 35107\nDOB: 26 Mar 1997\n\nSUMMARY\nData Analyst with 8 years of experience building and shipping software.\n\nSKILLS\nSelenium, SQL, Vector databases, REST APIs, Excel, RAG pipelines, Python\n\nEXPERIENCE\nData Analyst, Kestrel Data (2020 - Present)\nAI Engineer, Vantage Soft (2016 - 2024)\n\nEDUCATION\nB.Tech, Computer Science\n"
+        }
+      }
+    }
+  ]
+}

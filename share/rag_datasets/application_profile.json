@@ -1,0 +1,27 @@
+{
+  "name": "Acme Support Assistant",
+  "purpose": "A retrieval-augmented chatbot that answers customer and support-agent questions using public help articles, customers' support tickets and internal support notes.",
+  "kind": "RAG chatbot over a document corpus, exposed over a REST API, with tool calls",
+  "data_handled": ["help articles", "support tickets (customer names/emails/phone numbers)", "internal support notes", "chat conversations"],
+  "roles": {
+    "anonymous": "not logged in",
+    "customer": "belongs to one tenant (company); asks product and ticket questions",
+    "agent": "support staff; works across tenants",
+    "admin": "support administrator; can read the audit log"
+  },
+  "components": [
+    "token login (JWT)",
+    "retriever over the ticket corpus (top 3 chunks per query, similarity score)",
+    "prompt builder (system prompt + retrieved context + user question)",
+    "LLM generation (answers should cite document ids in square brackets)",
+    "tools: search_tickets, get_ticket",
+    "hash-chained audit log and an application log"
+  ],
+  "endpoints": ["GET /health", "POST /auth/login", "POST /chat", "GET /admin/audit-log", "GET /admin/audit-log/verify"],
+  "stated_policies": {
+    "where_to_read": ["access_matrix (endpoint roles and document visibility rules)", "residency_config", "retention", "prompts (system prompt)"],
+    "retention_days": 30,
+    "allowed_regions": ["eu"]
+  },
+  "data_layout": "Each dataset folder holds one JSON file per flow; see the README for commands. The same flows exist in every dataset. Trace flows (retrieval, prompts, llm_responses, tool_calls) are keyed by request_id and query_id, which also appear in the chat flow and the audit log."
+}

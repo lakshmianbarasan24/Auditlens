@@ -1,0 +1,131 @@
+{
+  "flow": "evaluations",
+  "exchanges": [
+    {
+      "request": {
+        "method": "GET",
+        "path": "/evaluations",
+        "role": "admin"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "881a28b542a07953dbcc0affd36896be"
+        },
+        "body": [
+          {
+            "id": "20261006-122800-000000",
+            "created_at": "2026-10-06T12:28:00",
+            "fit_score": 31,
+            "recommendation": "Reject",
+            "jd_preview": "AI Engineer We are hiring an AI Engineer to build LLM-powered applications. Required skills: Python, LangChain, Prompt engineering, REST APIs, FastAPI, RAG pipe...",
+            "resume_preview": "Tomas Rao Email: tomas.rao@example.com | Phone: +1 (415) 555-0170 DOB: 24 Mar 1996 SUMMARY Network Engineer with 9 years of experience building and shipping sof..."
+          },
+          {
+            "id": "20261006-122100-000000",
+            "created_at": "2026-10-06T12:21:00",
+            "fit_score": 43,
+            "recommendation": "Reject",
+            "jd_preview": "AI Engineer We are hiring an AI Engineer to build LLM-powered applications. Required skills: Python, LangChain, Prompt engineering, REST APIs, FastAPI, RAG pipe...",
+            "resume_preview": "Daniel Nair Email: daniel.nair@example.com | Phone: +91 98902 44649 SUMMARY Network Engineer with 3 years of experience building and shipping software. SKILLS P..."
+          },
+          {
+            "id": "20261005-121400-000000",
+            "created_at": "2026-10-05T12:14:00",
+            "fit_score": 44,
+            "recommendation": "Hold",
+            "jd_preview": "AI Engineer We are hiring an AI Engineer to build LLM-powered applications. Required skills: Python, LangChain, Prompt engineering, REST APIs, FastAPI, RAG pipe...",
+            "resume_preview": "Rahul Fischer Email: rahul.fischer@example.com | Phone: +1 (415) 555-0128 SUMMARY QA Engineer with 11 years of experience building and shipping software. SKILLS..."
+          },
+          {
+            "id": "20260828-120700-000000",
+            "created_at": "2026-08-28T12:07:00",
+            "fit_score": 45,
+            "recommendation": "Reject",
+            "jd_preview": "AI Engineer We are hiring an AI Engineer to build LLM-powered applications. Required skills: Python, LangChain, Prompt engineering, REST APIs, FastAPI, RAG pipe...",
+            "resume_preview": "Sneha Walker Email: sneha.walker@example.com | Phone: +91 98747 75996 DOB: 12 Mar 1990 SUMMARY Business Analyst with 10 years of experience building and shippin..."
+          },
+          {
+            "id": "20260825-120000-000000",
+            "created_at": "2026-08-25T12:00:00",
+            "fit_score": 29,
+            "recommendation": "Reject",
+            "jd_preview": "AI Engineer We are hiring an AI Engineer to build LLM-powered applications. Required skills: Python, LangChain, Prompt engineering, REST APIs, FastAPI, RAG pipe...",
+            "resume_preview": "Priya Rao Email: priya.rao@example.com | Phone: +91 98933 12167 SUMMARY Java Developer with 6 years of experience building and shipping software. SKILLS Jira, P..."
+          }
+        ]
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "path": "/evaluations",
+        "role": "anonymous"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "db431f7185e33c3cce1d0d4c8aaf8117"
+        },
+        "body": [
+          {
+            "id": "20261006-122800-000000",
+            "created_at": "2026-10-06T12:28:00",
+            "fit_score": 31,
+            "recommendation": "Reject",
+            "jd_preview": "AI Engineer We are hiring an AI Engineer to build LLM-powered applications. Required skills: Python, LangChain, Prompt engineering, REST APIs, FastAPI, RAG pipe...",
+            "resume_preview": "Tomas Rao Email: tomas.rao@example.com | Phone: +1 (415) 555-0170 DOB: 24 Mar 1996 SUMMARY Network Engineer with 9 years of experience building and shipping sof..."
+          },
+          {
+            "id": "20261006-122100-000000",
+            "created_at": "2026-10-06T12:21:00",
+            "fit_score": 43,
+            "recommendation": "Reject",
+            "jd_preview": "AI Engineer We are hiring an AI Engineer to build LLM-powered applications. Required skills: Python, LangChain, Prompt engineering, REST APIs, FastAPI, RAG pipe...",
+            "resume_preview": "Daniel Nair Email: daniel.nair@example.com | Phone: +91 98902 44649 SUMMARY Network Engineer with 3 years of experience building and shipping software. SKILLS P..."
+          },
+          {
+            "id": "20261005-121400-000000",
+            "created_at": "2026-10-05T12:14:00",
+            "fit_score": 44,
+            "recommendation": "Hold",
+            "jd_preview": "AI Engineer We are hiring an AI Engineer to build LLM-powered applications. Required skills: Python, LangChain, Prompt engineering, REST APIs, FastAPI, RAG pipe...",
+            "resume_preview": "Rahul Fischer Email: rahul.fischer@example.com | Phone: +1 (415) 555-0128 SUMMARY QA Engineer with 11 years of experience building and shipping software. SKILLS..."
+          },
+          {
+            "id": "20260828-120700-000000",
+            "created_at": "2026-08-28T12:07:00",
+            "fit_score": 45,
+            "recommendation": "Reject",
+            "jd_preview": "AI Engineer We are hiring an AI Engineer to build LLM-powered applications. Required skills: Python, LangChain, Prompt engineering, REST APIs, FastAPI, RAG pipe...",
+            "resume_preview": "Sneha Walker Email: sneha.walker@example.com | Phone: +91 98747 75996 DOB: 12 Mar 1990 SUMMARY Business Analyst with 10 years of experience building and shippin..."
+          },
+          {
+            "id": "20260825-120000-000000",
+            "created_at": "2026-08-25T12:00:00",
+            "fit_score": 29,
+            "recommendation": "Reject",
+            "jd_preview": "AI Engineer We are hiring an AI Engineer to build LLM-powered applications. Required skills: Python, LangChain, Prompt engineering, REST APIs, FastAPI, RAG pipe...",
+            "resume_preview": "Priya Rao Email: priya.rao@example.com | Phone: +91 98933 12167 SUMMARY Java Developer with 6 years of experience building and shipping software. SKILLS Jira, P..."
+          }
+        ]
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "path": "/evaluations",
+        "role": "recruiter"
+      },
+      "response": {
+        "status": 403,
+        "headers": {
+          "X-Request-ID": "f750717a7a8d3d2dbe8eb7de25294228"
+        },
+        "body": {
+          "detail": "Role 'recruiter' is not permitted to perform this action"
+        }
+      }
+    }
+  ]
+}

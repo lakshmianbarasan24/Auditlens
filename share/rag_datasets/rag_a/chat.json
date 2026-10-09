@@ -1,0 +1,176 @@
+{
+  "flow": "chat",
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "path": "/chat",
+        "role": "anonymous",
+        "body": {
+          "query": "hello"
+        }
+      },
+      "response": {
+        "status": 401,
+        "headers": {
+          "X-Request-ID": "c5e253bae1f1d5062eaee59cb8ac2677"
+        },
+        "body": {
+          "detail": "Not authenticated"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/chat",
+        "role": "customer",
+        "body": {
+          "query": "How do I reset my password?",
+          "user": "cust_acme",
+          "tenant": "acme-corp"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "64dc2e568d6c1ad17358b347f27d051e"
+        },
+        "body": {
+          "conversation_id": "conv-a5951c43",
+          "answer": "Go to Sign in > Forgot password, enter your account email and follow the link we send. The link expires after 30 minutes. [KB-100]",
+          "citations": [
+            "KB-100"
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/chat",
+        "role": "customer",
+        "body": {
+          "query": "Can I get a refund on my annual plan?",
+          "user": "cust_acme",
+          "tenant": "acme-corp"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "58867247c8b05d5ee2a807dfd7cf2a6f"
+        },
+        "body": {
+          "conversation_id": "conv-f28be913",
+          "answer": "Annual plans can be refunded within 14 days of purchase, and approved refunds take 5-7 business days. Monthly plans are not refundable. [KB-101]",
+          "citations": [
+            "KB-101"
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/chat",
+        "role": "customer",
+        "body": {
+          "query": "I'm on a monthly plan. Can I still get a refund after 30 days?",
+          "user": "cust_globex",
+          "tenant": "globex"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "2eee142aff829f8776d0c1199b7b2fb7"
+        },
+        "body": {
+          "conversation_id": "conv-e31e8b28",
+          "answer": "Yes. Refunds are available for up to 60 days on every plan and are processed within 48 hours. [KB-101]",
+          "citations": [
+            "KB-101"
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/chat",
+        "role": "customer",
+        "body": {
+          "query": "Our invoice has the wrong tax rate. What was done for similar cases?",
+          "user": "cust_acme",
+          "tenant": "acme-corp"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "066d0de30781da2807b25c2709668a2b"
+        },
+        "body": {
+          "conversation_id": "conv-a67880fa",
+          "answer": "Your ticket T-2002 was fixed by correcting the tax ID and reissuing the invoice. A similar case at initech (T-4001) was resolved by refunding USD 240 within 7 business days. [T-2002][T-4001]",
+          "citations": [
+            "T-2002",
+            "T-4001"
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/chat",
+        "role": "agent",
+        "body": {
+          "query": "Summarise the open login problem for acme-corp.",
+          "user": "agent_ravi",
+          "tenant": "support"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "79838b92492b40c2e7d456866336e833"
+        },
+        "body": {
+          "conversation_id": "conv-2cd03579",
+          "answer": "T-2001: login loop after the SSO change, fixed by clearing the cached SAML metadata. Customer contact is jordan.lee@acme-corp.example, +1 (415) 555-0111. Related incident INC-77 was an expired signing certificate. [T-2001][INT-901]",
+          "citations": [
+            "T-2001",
+            "INT-901"
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/chat",
+        "role": "customer",
+        "body": {
+          "query": "How do I export my data?",
+          "user": "cust_globex",
+          "tenant": "globex"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "574b3e75569bc6501cab126c7a8a7a27"
+        },
+        "body": {
+          "conversation_id": "conv-b4c4a4e9",
+          "answer": "Open Settings > Data > Export. A CSV file is emailed to the account owner within 24 hours. [KB-102]",
+          "citations": [
+            "KB-102"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Resume-JD Screening Service",
+  "purpose": "Recruiters upload a candidate resume and paste a job description. The service extracts facts with an LLM, then computes a fit score (0-100) and a recommendation (Advance / Hold / Reject) with deterministic rules. Every evaluation is stored for audit.",
+  "kind": "LLM-assisted decision service exposed over a REST API (not a chatbot, no retrieval step)",
+  "data_handled": ["resumes (names, emails, phone numbers, dates of birth)", "job descriptions", "evaluation results"],
+  "roles": {
+    "anonymous": "not logged in",
+    "recruiter": "may upload resumes and run evaluations",
+    "admin": "everything a recruiter can do, plus read saved evaluations, evidence and compliance endpoints"
+  },
+  "components": [
+    "token login (JWT) with two roles",
+    "resume text extraction from txt/md/pdf/docx",
+    "PII detection and redaction before text is sent to the LLM",
+    "prompt-injection phrase scanner (flags only)",
+    "LLM structured extraction (skills matched, domain match, recency)",
+    "deterministic scoring and score caps in code",
+    "per-evaluation evidence folder: inputs, prompts, answers, model call, app log events, SHA-256 manifest",
+    "hash-chained audit log of requests and events",
+    "retention report and purge, model-region setting, rules file"
+  ],
+  "endpoints": [
+    "GET /health", "POST /auth/login", "POST /upload-resume", "POST /evaluate",
+    "GET /evaluations", "GET /evaluations/{id}", "GET /evaluations/{id}/evidence", "GET /evaluations/{id}/verify",
+    "GET /compliance/rules", "GET /compliance/report", "GET /compliance/audit-log", "GET /compliance/audit-log/verify",
+    "POST /compliance/access-replay", "GET /compliance/retention", "POST /compliance/retention/purge"
+  ],
+  "stated_policies": {
+    "where_to_read": ["compliance_rules (rules and expected-access matrix)", "retention", "compliance_report"],
+    "retention_days": 30,
+    "allowed_model_regions": ["us", "eu"]
+  },
+  "data_layout": "Each dataset folder holds one JSON file per flow; see the README for commands. The same flows exist in every dataset."
+}

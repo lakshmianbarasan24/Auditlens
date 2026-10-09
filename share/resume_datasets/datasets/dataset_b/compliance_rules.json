@@ -1,0 +1,149 @@
+{
+  "flow": "compliance_rules",
+  "exchanges": [
+    {
+      "request": {
+        "method": "GET",
+        "path": "/compliance/rules",
+        "role": "admin"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "ce4f574e8619560359bf31adb5845877"
+        },
+        "body": {
+          "version": "1.0.0",
+          "description": "Data-protection rules for the Resume/JD evaluation app. Each rule is tested by the named check in app/services/compliance.py.",
+          "rules": [
+            {
+              "id": "PII-01",
+              "title": "No PII in application logs or the audit log",
+              "severity": "high",
+              "check": "pii_in_logs"
+            },
+            {
+              "id": "PII-02",
+              "title": "No PII is sent to the model provider",
+              "severity": "high",
+              "check": "pii_in_prompts"
+            },
+            {
+              "id": "ACC-01",
+              "title": "Every request outcome matches the expected-access matrix",
+              "severity": "critical",
+              "check": "access_replay"
+            },
+            {
+              "id": "ACC-02",
+              "title": "Unauthenticated requests to protected endpoints are rejected",
+              "severity": "critical",
+              "check": "unauthenticated_rejected"
+            },
+            {
+              "id": "RET-01",
+              "title": "Stored resumes and evaluations are deleted after the retention window",
+              "severity": "medium",
+              "check": "retention"
+            },
+            {
+              "id": "RES-01",
+              "title": "The model provider region is on the allowed list",
+              "severity": "high",
+              "check": "residency"
+            },
+            {
+              "id": "AUD-01",
+              "title": "Every evaluation has sealed evidence whose hashes still verify",
+              "severity": "high",
+              "check": "evidence_integrity"
+            },
+            {
+              "id": "AUD-02",
+              "title": "The audit log hash chain is intact",
+              "severity": "critical",
+              "check": "audit_chain"
+            },
+            {
+              "id": "AUD-03",
+              "title": "Audit events and stored evaluations match one-to-one",
+              "severity": "medium",
+              "check": "audit_completeness"
+            }
+          ],
+          "access_matrix": [
+            {
+              "method": "GET",
+              "path_regex": "^/health$",
+              "allowed_roles": [
+                "anonymous",
+                "recruiter",
+                "admin"
+              ]
+            },
+            {
+              "method": "POST",
+              "path_regex": "^/auth/login$",
+              "allowed_roles": [
+                "anonymous",
+                "recruiter",
+                "admin"
+              ]
+            },
+            {
+              "method": "POST",
+              "path_regex": "^/upload-resume$",
+              "allowed_roles": [
+                "recruiter",
+                "admin"
+              ]
+            },
+            {
+              "method": "POST",
+              "path_regex": "^/evaluate$",
+              "allowed_roles": [
+                "recruiter",
+                "admin"
+              ]
+            },
+            {
+              "method": "GET",
+              "path_regex": "^/evaluations$",
+              "allowed_roles": [
+                "admin"
+              ]
+            },
+            {
+              "method": "GET",
+              "path_regex": "^/evaluations/[^/]+$",
+              "allowed_roles": [
+                "admin"
+              ]
+            },
+            {
+              "method": "GET",
+              "path_regex": "^/evaluations/[^/]+/(evidence|verify)$",
+              "allowed_roles": [
+                "admin"
+              ]
+            },
+            {
+              "method": "GET",
+              "path_regex": "^/compliance/.*$",
+              "allowed_roles": [
+                "admin"
+              ]
+            },
+            {
+              "method": "POST",
+              "path_regex": "^/compliance/.*$",
+              "allowed_roles": [
+                "admin"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

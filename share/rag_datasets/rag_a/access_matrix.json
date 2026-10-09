@@ -1,0 +1,54 @@
+{
+  "flow": "access_matrix",
+  "exchanges": [
+    {
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/health",
+          "allowed_roles": [
+            "anonymous",
+            "customer",
+            "agent",
+            "admin"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/auth/login",
+          "allowed_roles": [
+            "anonymous",
+            "customer",
+            "agent",
+            "admin"
+          ]
+        },
+        {
+          "method": "POST",
+          "path": "/chat",
+          "allowed_roles": [
+            "customer",
+            "agent",
+            "admin"
+          ]
+        },
+        {
+          "method": "GET",
+          "path": "/admin/audit-log",
+          "allowed_roles": [
+            "admin"
+          ]
+        }
+      ],
+      "document_access": {
+        "public": "any authenticated role",
+        "tenant": "customers of the same tenant; agents and admins",
+        "internal": "agents and admins only"
+      },
+      "tool_access": {
+        "search_tickets": "any authenticated role, results filtered by document_access",
+        "get_ticket": "same rule as document_access"
+      }
+    }
+  ]
+}

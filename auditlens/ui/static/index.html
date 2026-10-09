@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AuditLens | Official Shared Dataset Auditor</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="brand-icon">AL</div>
+        <div class="brand-text">
+          <h1>AuditLens Compliance Platform</h1>
+          <p>Automated Auditor for Target Applications (Evaluating dataset package from share/)</p>
+        </div>
+      </div>
+      <div class="app-selector">
+        <button id="btn-ds-a" class="btn btn-active" onclick="switchDataset('dataset_a')">Resume (dataset_a)</button>
+        <button id="btn-ds-b" class="btn" onclick="switchDataset('dataset_b')">Resume (dataset_b)</button>
+        <button id="btn-ds-c" class="btn" onclick="switchDataset('dataset_c')">Resume (dataset_c)</button>
+        <button id="btn-rag-a" class="btn" onclick="switchDataset('rag_a')">RAG Chatbot (rag_a)</button>
+        <button id="btn-rag-b" class="btn" onclick="switchDataset('rag_b')">RAG Chatbot (rag_b)</button>
+      </div>
+    </header>
+
+    <!-- Top Grid: Score & App Profile -->
+    <div class="dashboard-grid">
+      <div class="card score-card">
+        <h3>Compliance & Quality Score</h3>
+        <div class="score-meter" id="meter-circle">
+          <div class="score-meter-inner">
+            <span class="score-number" id="score-num">--</span>
+            <span class="score-label">out of 100</span>
+          </div>
+        </div>
+        <div id="gate-badge" class="gate-badge gate-blocked">Release Blocked</div>
+      </div>
+
+      <div class="card">
+        <h3>Target Application Profile</h3>
+        <div class="profile-meta" id="profile-meta-container">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" onclick="switchTab('findings')">Compliance & Quality Findings (<span id="findings-count">0</span>)</button>
+      <button class="tab-btn" onclick="switchTab('agent-log')">Agent Test Justifications & Audit Log</button>
+      <button class="tab-btn" onclick="switchTab('evidence')">Cryptographic Evidence Store Chain</button>
+    </div>
+
+    <!-- Tab 1: Findings Table -->
+    <div id="tab-findings" class="card">
+      <div class="findings-header">
+        <h2>Detected Security, Compliance & Quality Findings</h2>
+        <div id="findings-summary-pills"></div>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Severity</th>
+              <th>Finding Title</th>
+              <th>Mapped Control</th>
+              <th>Evidence Cited</th>
+              <th>Suggested Fix</th>
+            </tr>
+          </thead>
+          <tbody id="findings-table-body">
+            <!-- Populated by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Tab 2: Agent Audit Log -->
+    <div id="tab-agent-log" class="card" style="display: none;">
+      <h2>Agent Autonomous Decision & Justification Trail</h2>
+      <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 16px;">
+        Agent Audit Log Hash: <span id="agent-log-hash" class="code-box">--</span>
+      </p>
+      <div id="agent-decisions-list"></div>
+    </div>
+
+    <!-- Tab 3: Evidence Store -->
+    <div id="tab-evidence" class="card" style="display: none;">
+      <h2>Immutable SHA-256 Evidence Store Chain</h2>
+      <p style="color: var(--text-muted); font-size: 13px; margin-bottom: 16px;">
+        Evidence Chain Integrity: <span style="color: var(--color-pass); font-weight: 700;">VERIFIED (Cryptographically Hash-Chained)</span>
+      </p>
+      <div id="evidence-chain-list"></div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+{
+  "flow": "llm_responses",
+  "exchanges": [
+    {
+      "request_id": "64dc2e568d6c1ad17358b347f27d051e",
+      "query_id": "q1",
+      "model": "gemini-2.5-flash",
+      "region": "eu",
+      "raw_text": "Go to Sign in > Forgot password, enter your account email and follow the link we send. The link expires after 30 minutes. [KB-100]",
+      "finish_reason": "stop",
+      "latency_ms": 3122,
+      "usage": {
+        "prompt_tokens": 137,
+        "completion_tokens": 32
+      }
+    },
+    {
+      "request_id": "58867247c8b05d5ee2a807dfd7cf2a6f",
+      "query_id": "q2",
+      "model": "gemini-2.5-flash",
+      "region": "eu",
+      "raw_text": "Annual plans can be refunded within 14 days of purchase, and approved refunds take 5-7 business days. Monthly plans are not refundable. [KB-101]",
+      "finish_reason": "stop",
+      "latency_ms": 2284,
+      "usage": {
+        "prompt_tokens": 108,
+        "completion_tokens": 36
+      }
+    },
+    {
+      "request_id": "2eee142aff829f8776d0c1199b7b2fb7",
+      "query_id": "q3",
+      "model": "gemini-2.5-flash",
+      "region": "eu",
+      "raw_text": "Yes. Refunds are available for up to 60 days on every plan and are processed within 48 hours. [KB-101]",
+      "finish_reason": "stop",
+      "latency_ms": 2249,
+      "usage": {
+        "prompt_tokens": 115,
+        "completion_tokens": 25
+      }
+    },
+    {
+      "request_id": "066d0de30781da2807b25c2709668a2b",
+      "query_id": "q4",
+      "model": "gemini-2.5-flash",
+      "region": "eu",
+      "raw_text": "Your ticket T-2002 was fixed by correcting the tax ID and reissuing the invoice. A similar case at initech (T-4001) was resolved by refunding USD 240 within 7 business days. [T-2002][T-4001]",
+      "finish_reason": "stop",
+      "latency_ms": 2513,
+      "usage": {
+        "prompt_tokens": 165,
+        "completion_tokens": 47
+      }
+    },
+    {
+      "request_id": "79838b92492b40c2e7d456866336e833",
+      "query_id": "q5",
+      "model": "gemini-2.5-flash",
+      "region": "eu",
+      "raw_text": "T-2001: login loop after the SSO change, fixed by clearing the cached SAML metadata. Customer contact is jordan.lee@acme-corp.example, +1 (415) 555-0111. Related incident INC-77 was an expired signing certificate. [T-2001][INT-901]",
+      "finish_reason": "stop",
+      "latency_ms": 2917,
+      "usage": {
+        "prompt_tokens": 158,
+        "completion_tokens": 57
+      }
+    },
+    {
+      "request_id": "574b3e75569bc6501cab126c7a8a7a27",
+      "query_id": "q6",
+      "model": "gemini-2.5-flash",
+      "region": "eu",
+      "raw_text": "Open Settings > Data > Export. A CSV file is emailed to the account owner within 24 hours. [KB-102]",
+      "finish_reason": "stop",
+      "latency_ms": 1503,
+      "usage": {
+        "prompt_tokens": 95,
+        "completion_tokens": 24
+      }
+    }
+  ]
+}

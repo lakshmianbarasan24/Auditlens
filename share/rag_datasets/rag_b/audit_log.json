@@ -1,0 +1,650 @@
+{
+  "flow": "audit_log",
+  "exchanges": [
+    {
+      "request": {
+        "method": "GET",
+        "path": "/admin/audit-log",
+        "role": "customer"
+      },
+      "response": {
+        "status": 403,
+        "headers": {
+          "X-Request-ID": "dd68b5d31cdfb35d418f41a61164cc27"
+        },
+        "body": {
+          "detail": "Role 'customer' is not permitted to perform this action"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "path": "/admin/audit-log",
+        "role": "admin"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "95c6e627e0e27ab46a5aad4a6d6d228f"
+        },
+        "body": [
+          {
+            "ts": "2026-10-08T09:00:03.820000+00:00",
+            "request_id": "2054e2efaec98b8abac3714de6f1167f",
+            "event": "http_request",
+            "method": "GET",
+            "path": "/health",
+            "status": 200,
+            "username": null,
+            "role": "anonymous",
+            "outcome": "allowed",
+            "duration_ms": 61,
+            "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+            "hash": "252a9c1422293a424b32d8e5f7712f8b434dca03b8fad784d771c333df0a2489"
+          },
+          {
+            "ts": "2026-10-08T09:00:07.163000+00:00",
+            "request_id": "dd4a7c63890135436f6c7b8759ed7f95",
+            "event": "login_failure",
+            "username": "cust_acme",
+            "prev_hash": "252a9c1422293a424b32d8e5f7712f8b434dca03b8fad784d771c333df0a2489",
+            "hash": "ade24bcc6c296d4e408520f9a1db568ea15a437d540cb389c1829ce2c9104ec9"
+          },
+          {
+            "ts": "2026-10-08T09:00:07.404000+00:00",
+            "request_id": "dd4a7c63890135436f6c7b8759ed7f95",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/auth/login",
+            "status": 401,
+            "username": null,
+            "role": "anonymous",
+            "outcome": "denied",
+            "duration_ms": 11,
+            "prev_hash": "ade24bcc6c296d4e408520f9a1db568ea15a437d540cb389c1829ce2c9104ec9",
+            "hash": "7f205402eb603f210b2cef84cc1b60c737b1131fedf4a20558c2f1588d4290d9"
+          },
+          {
+            "ts": "2026-10-08T09:00:10.501000+00:00",
+            "request_id": "3306605e3d555ccf49b7a7d01fcf44e2",
+            "event": "login_success",
+            "username": "cust_acme",
+            "role": "customer",
+            "prev_hash": "7f205402eb603f210b2cef84cc1b60c737b1131fedf4a20558c2f1588d4290d9",
+            "hash": "66ccecbeaaf074d293dba37c60e832a3b6c1e9801d4a7d5237d8c0a77d286d33"
+          },
+          {
+            "ts": "2026-10-08T09:00:10.846000+00:00",
+            "request_id": "3306605e3d555ccf49b7a7d01fcf44e2",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/auth/login",
+            "status": 200,
+            "username": null,
+            "role": "anonymous",
+            "outcome": "allowed",
+            "duration_ms": 16,
+            "prev_hash": "66ccecbeaaf074d293dba37c60e832a3b6c1e9801d4a7d5237d8c0a77d286d33",
+            "hash": "2bab5f67256173015cae6c3d719acf4f9337ee57a1c376a8b0103b9c48aaed5b"
+          },
+          {
+            "ts": "2026-10-08T09:00:14.586000+00:00",
+            "request_id": "3b34abe125c60e64f976eaf1a3c96b14",
+            "event": "login_success",
+            "username": "cust_globex",
+            "role": "customer",
+            "prev_hash": "2bab5f67256173015cae6c3d719acf4f9337ee57a1c376a8b0103b9c48aaed5b",
+            "hash": "4740d7cf2c33f36842ac77b9cc956c794b0cce840c91731ff73e5eda874a0b5e"
+          },
+          {
+            "ts": "2026-10-08T09:00:14.622000+00:00",
+            "request_id": "3b34abe125c60e64f976eaf1a3c96b14",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/auth/login",
+            "status": 200,
+            "username": null,
+            "role": "anonymous",
+            "outcome": "allowed",
+            "duration_ms": 10,
+            "prev_hash": "4740d7cf2c33f36842ac77b9cc956c794b0cce840c91731ff73e5eda874a0b5e",
+            "hash": "449bdd47a1b0d83faa7a26286c3c553a3a10d44df3af8f8745c0f01f4e3d07f4"
+          },
+          {
+            "ts": "2026-10-08T09:00:17.501000+00:00",
+            "request_id": "b6e39f1065ad9b6262ed17cc39a141e1",
+            "event": "login_success",
+            "username": "cust_initech",
+            "role": "customer",
+            "prev_hash": "449bdd47a1b0d83faa7a26286c3c553a3a10d44df3af8f8745c0f01f4e3d07f4",
+            "hash": "309826a385678567b4993ef1fb3a8b1deaff1d330abb5cbbff7e3671b91c1773"
+          },
+          {
+            "ts": "2026-10-08T09:00:17.572000+00:00",
+            "request_id": "b6e39f1065ad9b6262ed17cc39a141e1",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/auth/login",
+            "status": 200,
+            "username": null,
+            "role": "anonymous",
+            "outcome": "allowed",
+            "duration_ms": 37,
+            "prev_hash": "309826a385678567b4993ef1fb3a8b1deaff1d330abb5cbbff7e3671b91c1773",
+            "hash": "9fb2fe95d3c07b8797a313fc645eb5096bd6e4a6af9d261caab306525faaa6de"
+          },
+          {
+            "ts": "2026-10-08T09:00:19.360000+00:00",
+            "request_id": "2c349c3731c530a64ed07c9c9522ecab",
+            "event": "login_success",
+            "username": "agent_ravi",
+            "role": "agent",
+            "prev_hash": "9fb2fe95d3c07b8797a313fc645eb5096bd6e4a6af9d261caab306525faaa6de",
+            "hash": "0044842d77750d11f939474e9ca83db2cab0839b86a5b7d45eb1117a69ad29f9"
+          },
+          {
+            "ts": "2026-10-08T09:00:19.386000+00:00",
+            "request_id": "2c349c3731c530a64ed07c9c9522ecab",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/auth/login",
+            "status": 200,
+            "username": null,
+            "role": "anonymous",
+            "outcome": "allowed",
+            "duration_ms": 50,
+            "prev_hash": "0044842d77750d11f939474e9ca83db2cab0839b86a5b7d45eb1117a69ad29f9",
+            "hash": "160211214f6083a644bfd834bc557e02609697126add0d314dfd0774da327ae5"
+          },
+          {
+            "ts": "2026-10-08T09:00:23.436000+00:00",
+            "request_id": "1d3d28959de2be9d5cb7326ed35ab2eb",
+            "event": "login_success",
+            "username": "admin_root",
+            "role": "admin",
+            "prev_hash": "160211214f6083a644bfd834bc557e02609697126add0d314dfd0774da327ae5",
+            "hash": "7b509d387938e2d62d320b8cb2a23f5be557d55e00989443747e55ab9805fbef"
+          },
+          {
+            "ts": "2026-10-08T09:00:23.575000+00:00",
+            "request_id": "1d3d28959de2be9d5cb7326ed35ab2eb",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/auth/login",
+            "status": 200,
+            "username": null,
+            "role": "anonymous",
+            "outcome": "allowed",
+            "duration_ms": 46,
+            "prev_hash": "7b509d387938e2d62d320b8cb2a23f5be557d55e00989443747e55ab9805fbef",
+            "hash": "61908e86a0267e65dd4ca80e388102368ea0c50249bdb3e385d0dae65ec86342"
+          },
+          {
+            "ts": "2026-10-08T09:00:25.047000+00:00",
+            "request_id": "924c14ebf3c03c893cf7aa91a3a90068",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/chat",
+            "status": 401,
+            "username": null,
+            "role": "anonymous",
+            "outcome": "denied",
+            "duration_ms": 64,
+            "prev_hash": "61908e86a0267e65dd4ca80e388102368ea0c50249bdb3e385d0dae65ec86342",
+            "hash": "72ce754e1c392cd74daf57c8a0122e84143d44dfbeb5b108da9a967775ac7c28"
+          },
+          {
+            "ts": "2026-10-08T10:00:02.830000+00:00",
+            "request_id": "1d9efccebf59d15eccb5555dd7f27eb0",
+            "event": "retrieval",
+            "username": "cust_globex",
+            "role": "customer",
+            "tenant": "globex",
+            "doc_ids": [
+              "T-3001"
+            ],
+            "scores": [
+              0.9
+            ],
+            "prev_hash": "72ce754e1c392cd74daf57c8a0122e84143d44dfbeb5b108da9a967775ac7c28",
+            "hash": "b9d7fc7db1889580b7a8a8235dccb8f39aaf3f40b3b873bb11aa330ddbbef756"
+          },
+          {
+            "ts": "2026-10-08T10:00:02.870000+00:00",
+            "request_id": "1d9efccebf59d15eccb5555dd7f27eb0",
+            "event": "tool_call",
+            "tool": "search_tickets",
+            "args": {
+              "query_chars": 45,
+              "top_k": 3
+            },
+            "status": "ok",
+            "prev_hash": "b9d7fc7db1889580b7a8a8235dccb8f39aaf3f40b3b873bb11aa330ddbbef756",
+            "hash": "292b9476f42687cfaed88c5d680aa39eb5872e37908ae258a1ef60c494de94d4"
+          },
+          {
+            "ts": "2026-10-08T10:00:03.250000+00:00",
+            "request_id": "1d9efccebf59d15eccb5555dd7f27eb0",
+            "event": "tool_call",
+            "tool": "get_ticket",
+            "args": {
+              "ticket_id": "T-3001"
+            },
+            "status": "ok",
+            "prev_hash": "292b9476f42687cfaed88c5d680aa39eb5872e37908ae258a1ef60c494de94d4",
+            "hash": "8d0f66ca0c66ef5fbee7090438e9c95eab24766741b91853fcddf3a015aa7b20"
+          },
+          {
+            "ts": "2026-10-08T10:00:03.414000+00:00",
+            "request_id": "1d9efccebf59d15eccb5555dd7f27eb0",
+            "event": "prompt_built",
+            "chars": 474,
+            "prompt_preview": "[T-3001] Ticket T-3001 (globex): API requests failing with rate limit errors. Resolution: rate limit raised from 300 to 600 requests per minute. Contact: sam.patel@globex.example, +1 (415) 555-0142.",
+            "prev_hash": "8d0f66ca0c66ef5fbee7090438e9c95eab24766741b91853fcddf3a015aa7b20",
+            "hash": "73bbd67ce9f80acf868ea7ab237823e68ec55f04b706bb1ac39c55bb060bfca0"
+          },
+          {
+            "ts": "2026-10-08T10:00:03.431000+00:00",
+            "request_id": "1d9efccebf59d15eccb5555dd7f27eb0",
+            "event": "llm_call",
+            "model": "gemini-2.5-flash",
+            "region": "us-east-1",
+            "latency_ms": 1723,
+            "status": "ok",
+            "prev_hash": "73bbd67ce9f80acf868ea7ab237823e68ec55f04b706bb1ac39c55bb060bfca0",
+            "hash": "aadb4e56390f4b1eb0384ef1ef74ae845e2c6492af246a9b08ae2834dbd87db2"
+          },
+          {
+            "ts": "2026-10-08T10:00:03.640000+00:00",
+            "request_id": "1d9efccebf59d15eccb5555dd7f27eb0",
+            "event": "answer_returned",
+            "conversation_id": "conv-7b8b156a",
+            "citations": [
+              "T-3001"
+            ],
+            "prev_hash": "aadb4e56390f4b1eb0384ef1ef74ae845e2c6492af246a9b08ae2834dbd87db2",
+            "hash": "05c59b766d75f4a9d0656dfa31ec05c030efa8be539de7a6684c037d1fba01df"
+          },
+          {
+            "ts": "2026-10-08T10:00:03.958000+00:00",
+            "request_id": "1d9efccebf59d15eccb5555dd7f27eb0",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/chat",
+            "status": 200,
+            "username": "cust_globex",
+            "role": "customer",
+            "outcome": "allowed",
+            "duration_ms": 38,
+            "prev_hash": "05c59b766d75f4a9d0656dfa31ec05c030efa8be539de7a6684c037d1fba01df",
+            "hash": "0b6a122fe89f1e3a1ce0f0cf42555a8ffce41fbc6830529f37ee6af341f128f6"
+          },
+          {
+            "ts": "2026-10-08T10:11:02.192000+00:00",
+            "request_id": "0b2840573afd2a8ea6dd23af08885711",
+            "event": "retrieval",
+            "username": "cust_initech",
+            "role": "customer",
+            "tenant": "initech",
+            "doc_ids": [
+              "T-4001",
+              "T-4002"
+            ],
+            "scores": [
+              0.88,
+              0.74
+            ],
+            "prev_hash": "0b6a122fe89f1e3a1ce0f0cf42555a8ffce41fbc6830529f37ee6af341f128f6",
+            "hash": "94d75bb0040f16dec53add2b624df1410500873dfd012942f33cdc9113b1998d"
+          },
+          {
+            "ts": "2026-10-08T10:11:02.292000+00:00",
+            "request_id": "0b2840573afd2a8ea6dd23af08885711",
+            "event": "tool_call",
+            "tool": "search_tickets",
+            "args": {
+              "query_chars": 49,
+              "top_k": 3
+            },
+            "status": "ok",
+            "prev_hash": "94d75bb0040f16dec53add2b624df1410500873dfd012942f33cdc9113b1998d",
+            "hash": "4b6c3a8fcbe2b5fdaa1d0c9fa283b1b1d82d4a7cb6946a16b96c3ea4a1106d7f"
+          },
+          {
+            "ts": "2026-10-08T10:11:02.619000+00:00",
+            "request_id": "0b2840573afd2a8ea6dd23af08885711",
+            "event": "tool_call",
+            "tool": "get_ticket",
+            "args": {
+              "ticket_id": "T-4001"
+            },
+            "status": "ok",
+            "prev_hash": "4b6c3a8fcbe2b5fdaa1d0c9fa283b1b1d82d4a7cb6946a16b96c3ea4a1106d7f",
+            "hash": "bcec0eca19c861eb353d82029f44f4968e96075f48fbe9455dc7397cde72ab3b"
+          },
+          {
+            "ts": "2026-10-08T10:11:02.675000+00:00",
+            "request_id": "0b2840573afd2a8ea6dd23af08885711",
+            "event": "tool_call",
+            "tool": "get_ticket",
+            "args": {
+              "ticket_id": "T-4002"
+            },
+            "status": "ok",
+            "prev_hash": "bcec0eca19c861eb353d82029f44f4968e96075f48fbe9455dc7397cde72ab3b",
+            "hash": "45b1854fbec4a17896bb3a9c5c6effc38bb4dacb3aa633955f599ded2d676203"
+          },
+          {
+            "ts": "2026-10-08T10:11:02.726000+00:00",
+            "request_id": "0b2840573afd2a8ea6dd23af08885711",
+            "event": "prompt_built",
+            "chars": 672,
+            "prompt_preview": "[T-4001] Ticket T-4001 (initech): Duplicate charge on the March invoice. Resolution: refunded USD 240 to the original payment method within 7 business days. Contact: [EMAIL_REDACTED].\n[T-4002] Ticket T-4002 (initech): Refund status question",
+            "prev_hash": "45b1854fbec4a17896bb3a9c5c6effc38bb4dacb3aa633955f599ded2d676203",
+            "hash": "049e589f7c68464a09aa2c78a5a6130dc1688346f46d0f035b2c07d1760a2e87"
+          },
+          {
+            "ts": "2026-10-08T10:11:03.097000+00:00",
+            "request_id": "0b2840573afd2a8ea6dd23af08885711",
+            "event": "llm_call",
+            "model": "gemini-2.5-flash",
+            "region": "us-east-1",
+            "latency_ms": 1299,
+            "status": "ok",
+            "prev_hash": "049e589f7c68464a09aa2c78a5a6130dc1688346f46d0f035b2c07d1760a2e87",
+            "hash": "0ba3558de2358733a240368f7b5f5ac43c13b38b77b7920084b43ac104c8c395"
+          },
+          {
+            "ts": "2026-10-08T10:11:03.392000+00:00",
+            "request_id": "0b2840573afd2a8ea6dd23af08885711",
+            "event": "answer_returned",
+            "conversation_id": "conv-bbe7d32c",
+            "citations": [
+              "T-4001"
+            ],
+            "prev_hash": "0ba3558de2358733a240368f7b5f5ac43c13b38b77b7920084b43ac104c8c395",
+            "hash": "80f9651c31115875da700f0772562048f6d1ee34d34af354973f5376645ebdde"
+          },
+          {
+            "ts": "2026-10-08T10:11:03.596000+00:00",
+            "request_id": "0b2840573afd2a8ea6dd23af08885711",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/chat",
+            "status": 200,
+            "username": "cust_initech",
+            "role": "customer",
+            "outcome": "allowed",
+            "duration_ms": 54,
+            "prev_hash": "80f9651c31115875da700f0772562048f6d1ee34d34af354973f5376645ebdde",
+            "hash": "3e99ae7427625b5d1093fa644396fdece3fc66075508715da6068baa136a3ed6"
+          },
+          {
+            "ts": "2026-10-08T10:22:01.914000+00:00",
+            "request_id": "6cafaf11f934ac15d9aab83560e91a08",
+            "event": "retrieval",
+            "username": "cust_acme",
+            "role": "customer",
+            "tenant": "acme-corp",
+            "doc_ids": [
+              "INT-900",
+              "KB-101"
+            ],
+            "scores": [
+              0.86,
+              0.7
+            ],
+            "prev_hash": "3e99ae7427625b5d1093fa644396fdece3fc66075508715da6068baa136a3ed6",
+            "hash": "fb7658846b879d33534759e57bc7701956962439c7b9362c06b598d200d33881"
+          },
+          {
+            "ts": "2026-10-08T10:22:02.143000+00:00",
+            "request_id": "6cafaf11f934ac15d9aab83560e91a08",
+            "event": "tool_call",
+            "tool": "search_tickets",
+            "args": {
+              "query_chars": 43,
+              "top_k": 3
+            },
+            "status": "ok",
+            "prev_hash": "fb7658846b879d33534759e57bc7701956962439c7b9362c06b598d200d33881",
+            "hash": "2cd0f07ac9cd0f5544b9233fd03eefc7a71c6c4b3e6392d3e3e2b0c75a50934d"
+          },
+          {
+            "ts": "2026-10-08T10:22:02.336000+00:00",
+            "request_id": "6cafaf11f934ac15d9aab83560e91a08",
+            "event": "tool_call",
+            "tool": "get_ticket",
+            "args": {
+              "ticket_id": "INT-900"
+            },
+            "status": "ok",
+            "prev_hash": "2cd0f07ac9cd0f5544b9233fd03eefc7a71c6c4b3e6392d3e3e2b0c75a50934d",
+            "hash": "112fae8d685eb75927bae16691d6754ebbecaeb4f954af80de30a42d48992051"
+          },
+          {
+            "ts": "2026-10-08T10:22:02.397000+00:00",
+            "request_id": "6cafaf11f934ac15d9aab83560e91a08",
+            "event": "prompt_built",
+            "chars": 623,
+            "prompt_preview": "[INT-900] Escalation playbook: refunds beyond 30 days need manager approval. Internal discount code SAVE40 may be offered to at-risk accounts. Do not share outside the support team.\n[KB-101] Refund policy: annual plans can be refunded withi",
+            "prev_hash": "112fae8d685eb75927bae16691d6754ebbecaeb4f954af80de30a42d48992051",
+            "hash": "30407e31d24a025a19b4d8733c1a3ec271194767f6a01a4285019b1f58286cd0"
+          },
+          {
+            "ts": "2026-10-08T10:22:02.762000+00:00",
+            "request_id": "6cafaf11f934ac15d9aab83560e91a08",
+            "event": "llm_call",
+            "model": "gemini-2.5-flash",
+            "region": "us-east-1",
+            "latency_ms": 1223,
+            "status": "ok",
+            "prev_hash": "30407e31d24a025a19b4d8733c1a3ec271194767f6a01a4285019b1f58286cd0",
+            "hash": "7e2cb55659997273097bdee2f5bd1caffe5530a8cb391f61834c3fe0a5e53278"
+          },
+          {
+            "ts": "2026-10-08T10:22:02.775000+00:00",
+            "request_id": "6cafaf11f934ac15d9aab83560e91a08",
+            "event": "answer_returned",
+            "conversation_id": "conv-e0ec7b7f",
+            "citations": [
+              "INT-900",
+              "KB-101"
+            ],
+            "prev_hash": "7e2cb55659997273097bdee2f5bd1caffe5530a8cb391f61834c3fe0a5e53278",
+            "hash": "a5e1237eeb1199bfa354391db7541a3635be0f728a4bcb4fb939d9d181d00b34"
+          },
+          {
+            "ts": "2026-10-08T10:22:03.145000+00:00",
+            "request_id": "6cafaf11f934ac15d9aab83560e91a08",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/chat",
+            "status": 200,
+            "username": "cust_acme",
+            "role": "customer",
+            "outcome": "allowed",
+            "duration_ms": 34,
+            "prev_hash": "a5e1237eeb1199bfa354391db7541a3635be0f728a4bcb4fb939d9d181d00b34",
+            "hash": "d11b203e6102e5ebba7dc5792e067c71594257832075788117ef771b8b137e8d"
+          },
+          {
+            "ts": "2026-10-08T10:33:01.496000+00:00",
+            "request_id": "e45863207473ab54a8aff6b7a4a31700",
+            "event": "retrieval",
+            "username": "cust_acme",
+            "role": "customer",
+            "tenant": "acme-corp",
+            "doc_ids": [
+              "KB-103"
+            ],
+            "scores": [
+              0.92
+            ],
+            "prev_hash": "d11b203e6102e5ebba7dc5792e067c71594257832075788117ef771b8b137e8d",
+            "hash": "04be0ca7dc03c45106dc0b5799215746acee530e32bdb4007be65bd44626e505"
+          },
+          {
+            "ts": "2026-10-08T10:33:01.716000+00:00",
+            "request_id": "e45863207473ab54a8aff6b7a4a31700",
+            "event": "tool_call",
+            "tool": "search_tickets",
+            "args": {
+              "query_chars": 43,
+              "top_k": 3
+            },
+            "status": "ok",
+            "prev_hash": "04be0ca7dc03c45106dc0b5799215746acee530e32bdb4007be65bd44626e505",
+            "hash": "acee5fc579c99c9daabe5a3ce1dd54d09375cc17a1dd1e36ceffd4e745047528"
+          },
+          {
+            "ts": "2026-10-08T10:33:02.051000+00:00",
+            "request_id": "e45863207473ab54a8aff6b7a4a31700",
+            "event": "prompt_built",
+            "chars": 419,
+            "prompt_preview": "[KB-103] Two-factor authentication: open Settings > Security > Enable 2FA, scan the QR code with an authenticator app and enter the 6-digit code.",
+            "prev_hash": "acee5fc579c99c9daabe5a3ce1dd54d09375cc17a1dd1e36ceffd4e745047528",
+            "hash": "3e13c2952c73dee141fa5c7ef1ce8c60693d7e88c65d96f631a279f25662552d"
+          },
+          {
+            "ts": "2026-10-08T10:33:02.061000+00:00",
+            "request_id": "e45863207473ab54a8aff6b7a4a31700",
+            "event": "llm_call",
+            "model": "gemini-2.5-flash",
+            "region": "us-east-1",
+            "latency_ms": 2180,
+            "status": "ok",
+            "prev_hash": "3e13c2952c73dee141fa5c7ef1ce8c60693d7e88c65d96f631a279f25662552d",
+            "hash": "638a1a31cc62c7a648c52cac3be35ea9bd242ace83fcbadb9991ab7cd1b643f1"
+          },
+          {
+            "ts": "2026-10-08T10:33:02.350000+00:00",
+            "request_id": "e45863207473ab54a8aff6b7a4a31700",
+            "event": "answer_returned",
+            "conversation_id": "conv-d95cf0da",
+            "citations": [],
+            "prev_hash": "638a1a31cc62c7a648c52cac3be35ea9bd242ace83fcbadb9991ab7cd1b643f1",
+            "hash": "b46889ca443796fe4b5116c56e1a73b96c8290db556c9bff6bdfe897d659443b"
+          },
+          {
+            "ts": "2026-10-08T10:33:02.585000+00:00",
+            "request_id": "e45863207473ab54a8aff6b7a4a31700",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/chat",
+            "status": 200,
+            "username": "cust_acme",
+            "role": "customer",
+            "outcome": "allowed",
+            "duration_ms": 35,
+            "prev_hash": "b46889ca443796fe4b5116c56e1a73b96c8290db556c9bff6bdfe897d659443b",
+            "hash": "b5d248dae2c0845fd43c3409bef8322c0cc844910af95cab06c17ffb78304852"
+          },
+          {
+            "ts": "2026-10-08T10:55:03.290000+00:00",
+            "request_id": "fbf0820568671cbd4299f1db822d542c",
+            "event": "retrieval",
+            "username": "cust_globex",
+            "role": "customer",
+            "tenant": "globex",
+            "doc_ids": [
+              "KB-100"
+            ],
+            "scores": [
+              0.93
+            ],
+            "prev_hash": "b5d248dae2c0845fd43c3409bef8322c0cc844910af95cab06c17ffb78304852",
+            "hash": "a5ea513fd298b157529c21c3d208470c25e32ba04fb13fab84a1ca552e123657"
+          },
+          {
+            "ts": "2026-10-08T10:55:03.419000+00:00",
+            "request_id": "fbf0820568671cbd4299f1db822d542c",
+            "event": "tool_call",
+            "tool": "search_tickets",
+            "args": {
+              "query_chars": 27,
+              "top_k": 3
+            },
+            "status": "ok",
+            "prev_hash": "a5ea513fd298b157529c21c3d208470c25e32ba04fb13fab84a1ca552e123657",
+            "hash": "70b8f5b7b36e16bbd6e2ef66bc0423b610a121cb4aa1a798c702e193fcb62109"
+          },
+          {
+            "ts": "2026-10-08T10:55:03.577000+00:00",
+            "request_id": "fbf0820568671cbd4299f1db822d542c",
+            "event": "prompt_built",
+            "chars": 405,
+            "prompt_preview": "[KB-100] Password reset: go to Sign in > Forgot password, enter your account email, and follow the link we send. The link expires after 30 minutes.",
+            "prev_hash": "70b8f5b7b36e16bbd6e2ef66bc0423b610a121cb4aa1a798c702e193fcb62109",
+            "hash": "9d954a318170335ce62583075e78e02cfb82f6ac88ee7fd3da39f349e8cbaf51"
+          },
+          {
+            "ts": "2026-10-08T10:55:03.749000+00:00",
+            "request_id": "fbf0820568671cbd4299f1db822d542c",
+            "event": "llm_call",
+            "model": "gemini-2.5-flash",
+            "region": "us-east-1",
+            "latency_ms": 2449,
+            "status": "ok",
+            "prev_hash": "9d954a318170335ce62583075e78e02cfb82f6ac88ee7fd3da39f349e8cbaf51",
+            "hash": "8f0e2357f8baf0df3637d88bb3b82f0d0ed06c3572e8c116ca6fb50edc8c37ba"
+          },
+          {
+            "ts": "2026-10-08T10:55:04.081000+00:00",
+            "request_id": "fbf0820568671cbd4299f1db822d542c",
+            "event": "answer_returned",
+            "conversation_id": "conv-54e064a7",
+            "citations": [
+              "KB-100"
+            ],
+            "prev_hash": "8f0e2357f8baf0df3637d88bb3b82f0d0ed06c3572e8c116ca6fb50edc8c37ba",
+            "hash": "35a89cbc444c2fb45a15b674e5e2ec8899983812cec365dd613fae1087422978"
+          },
+          {
+            "ts": "2026-10-08T10:55:04.304000+00:00",
+            "request_id": "fbf0820568671cbd4299f1db822d542c",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/chat",
+            "status": 200,
+            "username": "cust_globex",
+            "role": "customer",
+            "outcome": "allowed",
+            "duration_ms": 63,
+            "prev_hash": "35a89cbc444c2fb45a15b674e5e2ec8899983812cec365dd613fae1087422978",
+            "hash": "a783fa8967a7bfc6dc1090fce2109ea8c0e100f8885ab5d1f8f4ecfabe64fc24"
+          },
+          {
+            "ts": "2026-10-08T11:40:00.835000+00:00",
+            "request_id": "dd68b5d31cdfb35d418f41a61164cc27",
+            "event": "http_request",
+            "method": "GET",
+            "path": "/admin/audit-log",
+            "status": 403,
+            "username": "cust_acme",
+            "role": "customer",
+            "outcome": "denied",
+            "duration_ms": 16,
+            "prev_hash": "a783fa8967a7bfc6dc1090fce2109ea8c0e100f8885ab5d1f8f4ecfabe64fc24",
+            "hash": "db4de52e0862a2a677b918393265c0c58fbabc73c26feea71ffacf36183d46c9"
+          },
+          {
+            "ts": "2026-10-08T11:40:03.941000+00:00",
+            "request_id": "95c6e627e0e27ab46a5aad4a6d6d228f",
+            "event": "http_request",
+            "method": "GET",
+            "path": "/admin/audit-log",
+            "status": 200,
+            "username": "admin_root",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 26,
+            "prev_hash": "db4de52e0862a2a677b918393265c0c58fbabc73c26feea71ffacf36183d46c9",
+            "hash": "068c03873f7bb5042f0b42962e22a4ff76dc0c52db54a531556af511be8f537b"
+          }
+        ]
+      }
+    }
+  ]
+}

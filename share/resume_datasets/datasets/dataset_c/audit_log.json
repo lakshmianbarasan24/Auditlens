@@ -1,0 +1,840 @@
+{
+  "flow": "audit_log",
+  "exchanges": [
+    {
+      "request": {
+        "method": "GET",
+        "path": "/compliance/audit-log",
+        "role": "recruiter"
+      },
+      "response": {
+        "status": 403,
+        "headers": {
+          "X-Request-ID": "658c03d2a402a73da0a2ac56ffabbff8"
+        },
+        "body": {
+          "detail": "Role 'recruiter' is not permitted to perform this action"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "path": "/compliance/audit-log",
+        "role": "admin"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "4f6e5d1e24afe22c583555a774438ff6"
+        },
+        "body": [
+          {
+            "ts": "2026-10-05T11:30:00.746000+00:00",
+            "request_id": "17147019a1d0d0f509ac23a7d2b5e0c9",
+            "event": "http_request",
+            "method": "GET",
+            "path": "/health",
+            "status": 200,
+            "username": null,
+            "role": "anonymous",
+            "outcome": "allowed",
+            "duration_ms": 9,
+            "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+            "hash": "6dee05ee864755f0a746467b7d253aa590eea8226b871b810c89553078638def"
+          },
+          {
+            "ts": "2026-10-05T11:30:01.991000+00:00",
+            "request_id": "614517f7c221cc823bb5e8e71353dda9",
+            "event": "login_failure",
+            "username": "admin",
+            "prev_hash": "6dee05ee864755f0a746467b7d253aa590eea8226b871b810c89553078638def",
+            "hash": "c766b8c81c5e369ab944f9f2bbb7705898231b2509d0ef26975a734aa7fbb43e"
+          },
+          {
+            "ts": "2026-10-05T11:30:02.162000+00:00",
+            "request_id": "614517f7c221cc823bb5e8e71353dda9",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/auth/login",
+            "status": 401,
+            "username": null,
+            "role": "anonymous",
+            "outcome": "denied",
+            "duration_ms": 26,
+            "prev_hash": "c766b8c81c5e369ab944f9f2bbb7705898231b2509d0ef26975a734aa7fbb43e",
+            "hash": "bf7a8dc387268c8bf4b73e346b31b0e0a34f6fb538bd861421da668ad34f9216"
+          },
+          {
+            "ts": "2026-10-05T11:30:04.923000+00:00",
+            "request_id": "48de1cf00f2718cc286f19060468aa66",
+            "event": "login_success",
+            "username": "admin",
+            "role": "admin",
+            "prev_hash": "bf7a8dc387268c8bf4b73e346b31b0e0a34f6fb538bd861421da668ad34f9216",
+            "hash": "c491826412a89321e38134e45d8995ebac1260e10e75ae5722e2316efee47fb2"
+          },
+          {
+            "ts": "2026-10-05T11:30:05.046000+00:00",
+            "request_id": "48de1cf00f2718cc286f19060468aa66",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/auth/login",
+            "status": 200,
+            "username": null,
+            "role": "anonymous",
+            "outcome": "allowed",
+            "duration_ms": 49,
+            "prev_hash": "c491826412a89321e38134e45d8995ebac1260e10e75ae5722e2316efee47fb2",
+            "hash": "f7d801788aa73b8e6143cb7b18c6176a81b7d192944f79b9452cffb60a0b0ce1"
+          },
+          {
+            "ts": "2026-10-05T11:30:05.840000+00:00",
+            "request_id": "20a0a9e7e2243e3476ab905d7b18f31e",
+            "event": "login_success",
+            "username": "recruiter",
+            "role": "recruiter",
+            "prev_hash": "f7d801788aa73b8e6143cb7b18c6176a81b7d192944f79b9452cffb60a0b0ce1",
+            "hash": "cf2cd1790d0d2ceb956e9a27ffb6a285a989057e6458cee7a009da8044fe2ad7"
+          },
+          {
+            "ts": "2026-10-05T11:30:06.177000+00:00",
+            "request_id": "20a0a9e7e2243e3476ab905d7b18f31e",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/auth/login",
+            "status": 200,
+            "username": null,
+            "role": "anonymous",
+            "outcome": "allowed",
+            "duration_ms": 18,
+            "prev_hash": "cf2cd1790d0d2ceb956e9a27ffb6a285a989057e6458cee7a009da8044fe2ad7",
+            "hash": "e9686198c08e23f8c21ea63d9c3b5b736a0598f2c32c065832ac74b24d9ebb75"
+          },
+          {
+            "ts": "2026-10-05T11:30:08.873000+00:00",
+            "request_id": "ee40cd87e133cc2ffb7dd88819a52fbf",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/upload-resume",
+            "status": 400,
+            "username": "admin",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 60,
+            "prev_hash": "e9686198c08e23f8c21ea63d9c3b5b736a0598f2c32c065832ac74b24d9ebb75",
+            "hash": "e0f945d2929df56fbeab5e321885006d5385118197f0df50cc9930f8b4a215bc"
+          },
+          {
+            "ts": "2026-10-05T11:30:09.556000+00:00",
+            "request_id": "5abc98cca7719400ded293a6758fb7b1",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/upload-resume",
+            "status": 401,
+            "username": null,
+            "role": "anonymous",
+            "outcome": "denied",
+            "duration_ms": 3,
+            "prev_hash": "e0f945d2929df56fbeab5e321885006d5385118197f0df50cc9930f8b4a215bc",
+            "hash": "f6a90b29d10e8191e7c6c83d8e8ec06af397f7cc1f9b03bae4fee46c47c55167"
+          },
+          {
+            "ts": "2026-10-05T11:30:11.097000+00:00",
+            "request_id": "42978e30fa3ef38dff612368aeb269c5",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/evaluate",
+            "status": 401,
+            "username": null,
+            "role": "anonymous",
+            "outcome": "denied",
+            "duration_ms": 24,
+            "prev_hash": "f6a90b29d10e8191e7c6c83d8e8ec06af397f7cc1f9b03bae4fee46c47c55167",
+            "hash": "e518cfb1d6db571592dd5a0a2580b55e0a3fbeada8870348c74d6854d694fd0e"
+          },
+          {
+            "ts": "2026-10-05T11:30:14.099000+00:00",
+            "request_id": "32ad8a82d36cc71c68331b5402575321",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/evaluate",
+            "status": 422,
+            "username": "admin",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 14,
+            "prev_hash": "e518cfb1d6db571592dd5a0a2580b55e0a3fbeada8870348c74d6854d694fd0e",
+            "hash": "82f9fda6179108b35653b00bb708c48444a68542be5e2eab779d1efbc5346062"
+          },
+          {
+            "ts": "2026-10-05T12:00:01.334000+00:00",
+            "request_id": "e7e1400b144f8257a157ef880f19596c",
+            "event": "resume_uploaded",
+            "filename": "AI_Engineer_Priya_Mehta.txt",
+            "text_sha256": "94f8d617054489ca2445dc5ab445650cdb085e7791f643a2886912e9d1cabf48",
+            "chars": 407,
+            "pii_types": {
+              "email": 1,
+              "phone": 1,
+              "dob": 1
+            },
+            "prev_hash": "82f9fda6179108b35653b00bb708c48444a68542be5e2eab779d1efbc5346062",
+            "hash": "60f2efb82544f2769f44c817ba331f4e560a1bf9197ba53857729ad55dc21073"
+          },
+          {
+            "ts": "2026-10-05T12:00:01.564000+00:00",
+            "request_id": "e7e1400b144f8257a157ef880f19596c",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/upload-resume",
+            "status": 200,
+            "username": "admin",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 54,
+            "prev_hash": "60f2efb82544f2769f44c817ba331f4e560a1bf9197ba53857729ad55dc21073",
+            "hash": "b559e65e35fbe985e39eeb2ff3f1091ecf96a0b67e49c53cb48c7c4bcf8f1bfd"
+          },
+          {
+            "ts": "2026-10-05T12:00:04.322000+00:00",
+            "request_id": "d04ef429cc539d8007725530da7e3bd2",
+            "event": "pii_detected",
+            "flags": [
+              "resume: email x1",
+              "resume: phone x1",
+              "resume: dob x1"
+            ],
+            "redacted_before_llm": true,
+            "prev_hash": "b559e65e35fbe985e39eeb2ff3f1091ecf96a0b67e49c53cb48c7c4bcf8f1bfd",
+            "hash": "05515a8746f91d3761f54e3cac3fe2d4e6e2e61d387cff55040b82381eb2a1fe"
+          },
+          {
+            "ts": "2026-10-05T12:00:04.495000+00:00",
+            "request_id": "d04ef429cc539d8007725530da7e3bd2",
+            "event": "llm_call",
+            "tool": "gemini.structured_output",
+            "model": "gemini-2.5-flash",
+            "region": "eu",
+            "temperature": 0,
+            "latency_ms": 3022,
+            "status": "ok",
+            "prev_hash": "05515a8746f91d3761f54e3cac3fe2d4e6e2e61d387cff55040b82381eb2a1fe",
+            "hash": "9f004b55f161a73305396d950402f50885d8ef97816d389ebbf2fd6a2a71f070"
+          },
+          {
+            "ts": "2026-10-05T12:00:04.572000+00:00",
+            "request_id": "d04ef429cc539d8007725530da7e3bd2",
+            "event": "evaluation_created",
+            "evaluation_id": "20261005-120000-000000",
+            "performed_by": "admin",
+            "prev_hash": "9f004b55f161a73305396d950402f50885d8ef97816d389ebbf2fd6a2a71f070",
+            "hash": "075190019b878aef627a3c278219eb4e389f682f9d58a817e9990587f40320b4"
+          },
+          {
+            "ts": "2026-10-05T12:00:04.836000+00:00",
+            "request_id": "d04ef429cc539d8007725530da7e3bd2",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/evaluate",
+            "status": 200,
+            "username": "admin",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 22,
+            "prev_hash": "075190019b878aef627a3c278219eb4e389f682f9d58a817e9990587f40320b4",
+            "hash": "b7b06023223d17e11758c9053322044c79d2fe8cb8662cbf33983db73ff16ee4"
+          },
+          {
+            "ts": "2026-10-05T12:07:02.583000+00:00",
+            "request_id": "b2aeefb3603437638584875f2c97e056",
+            "event": "resume_uploaded",
+            "filename": "AI_Engineer_Sneha_Khan.txt",
+            "text_sha256": "47e75d1e121b2ab858901e4773156db2973a0e4fe84140dfb01f4ed5579741b1",
+            "chars": 391,
+            "pii_types": {
+              "email": 1,
+              "phone": 1,
+              "dob": 1
+            },
+            "prev_hash": "b7b06023223d17e11758c9053322044c79d2fe8cb8662cbf33983db73ff16ee4",
+            "hash": "1e4181a2fa12db9d6d889d2d0963e54f582ea9cbf7dc8e34cb11e60a5e28e225"
+          },
+          {
+            "ts": "2026-10-05T12:07:02.885000+00:00",
+            "request_id": "b2aeefb3603437638584875f2c97e056",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/upload-resume",
+            "status": 200,
+            "username": "recruiter",
+            "role": "recruiter",
+            "outcome": "allowed",
+            "duration_ms": 46,
+            "prev_hash": "1e4181a2fa12db9d6d889d2d0963e54f582ea9cbf7dc8e34cb11e60a5e28e225",
+            "hash": "143ffa5a595d65e8c726134815e6d825024f6838fe628eb6519c9985c0a613d3"
+          },
+          {
+            "ts": "2026-10-05T12:07:05.098000+00:00",
+            "request_id": "227305bbed7e02392f37f038a1169013",
+            "event": "pii_detected",
+            "flags": [
+              "resume: email x1",
+              "resume: phone x1",
+              "resume: dob x1"
+            ],
+            "redacted_before_llm": true,
+            "prev_hash": "143ffa5a595d65e8c726134815e6d825024f6838fe628eb6519c9985c0a613d3",
+            "hash": "ef8eaba771aac59348a272b5396a6d575994d779d934b6087ceb88c140357d36"
+          },
+          {
+            "ts": "2026-10-05T12:07:05.166000+00:00",
+            "request_id": "227305bbed7e02392f37f038a1169013",
+            "event": "llm_call",
+            "tool": "gemini.structured_output",
+            "model": "gemini-2.5-flash",
+            "region": "eu",
+            "temperature": 0,
+            "latency_ms": 1842,
+            "status": "ok",
+            "prev_hash": "ef8eaba771aac59348a272b5396a6d575994d779d934b6087ceb88c140357d36",
+            "hash": "cef0555a7da94481e9e6443f30ba2ebc0ab0da78af88b7d6d642e8560e8dfc2d"
+          },
+          {
+            "ts": "2026-10-05T12:07:05.416000+00:00",
+            "request_id": "227305bbed7e02392f37f038a1169013",
+            "event": "evaluation_created",
+            "evaluation_id": "20261005-120700-000000",
+            "performed_by": "recruiter",
+            "prev_hash": "cef0555a7da94481e9e6443f30ba2ebc0ab0da78af88b7d6d642e8560e8dfc2d",
+            "hash": "4af74d902b2a1b2edf7fb21621d2cce21d5d1571264d54ac64d9cbc454b6a976"
+          },
+          {
+            "ts": "2026-10-05T12:07:05.452000+00:00",
+            "request_id": "227305bbed7e02392f37f038a1169013",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/evaluate",
+            "status": 200,
+            "username": "recruiter",
+            "role": "recruiter",
+            "outcome": "allowed",
+            "duration_ms": 34,
+            "prev_hash": "4af74d902b2a1b2edf7fb21621d2cce21d5d1571264d54ac64d9cbc454b6a976",
+            "hash": "c6881328fc9f1ad6baed27d141b7808fbdb5729fc3fb8fb28fe0d57a7ad86843"
+          },
+          {
+            "ts": "2026-10-06T12:14:01.163000+00:00",
+            "request_id": "fd49de1131206aa82303f5377b104416",
+            "event": "resume_uploaded",
+            "filename": "AI_Engineer_Rahul_Haddad.txt",
+            "text_sha256": "5505607e7d649dd9325f80c911e644c88a1028e21a9c08b922e634a38052afb0",
+            "chars": 362,
+            "pii_types": {
+              "email": 1,
+              "phone": 1
+            },
+            "prev_hash": "c6881328fc9f1ad6baed27d141b7808fbdb5729fc3fb8fb28fe0d57a7ad86843",
+            "hash": "a853e8ca2aecbcea35e505b1b7dd7412d899164f064242c273cc1842386869a5"
+          },
+          {
+            "ts": "2026-10-06T12:14:01.304000+00:00",
+            "request_id": "fd49de1131206aa82303f5377b104416",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/upload-resume",
+            "status": 200,
+            "username": "admin",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 9,
+            "prev_hash": "a853e8ca2aecbcea35e505b1b7dd7412d899164f064242c273cc1842386869a5",
+            "hash": "2e60d19dfe619bc9abd91ee3c68343009c8bc8a4810d2673269543c680510a88"
+          },
+          {
+            "ts": "2026-10-06T12:14:03.469000+00:00",
+            "request_id": "4d438801672d6cd9f321be46ca02fc13",
+            "event": "pii_detected",
+            "flags": [
+              "resume: email x1",
+              "resume: phone x1"
+            ],
+            "redacted_before_llm": true,
+            "prev_hash": "2e60d19dfe619bc9abd91ee3c68343009c8bc8a4810d2673269543c680510a88",
+            "hash": "2521b47d2563e14be3241955221d9fa30b42186cdf5a1c6c27c0f8d4270265e6"
+          },
+          {
+            "ts": "2026-10-06T12:14:03.622000+00:00",
+            "request_id": "4d438801672d6cd9f321be46ca02fc13",
+            "event": "llm_call",
+            "tool": "gemini.structured_output",
+            "model": "gemini-2.5-flash",
+            "region": "eu",
+            "temperature": 0,
+            "latency_ms": 1882,
+            "status": "ok",
+            "prev_hash": "2521b47d2563e14be3241955221d9fa30b42186cdf5a1c6c27c0f8d4270265e6",
+            "hash": "c6c08905137107e1dfc9528e245fec40929f6b5cccc8f63610242f8d7758552c"
+          },
+          {
+            "ts": "2026-10-06T12:14:03.806000+00:00",
+            "request_id": "4d438801672d6cd9f321be46ca02fc13",
+            "event": "evaluation_created",
+            "evaluation_id": "20261006-121400-000000",
+            "performed_by": "admin",
+            "prev_hash": "c6c08905137107e1dfc9528e245fec40929f6b5cccc8f63610242f8d7758552c",
+            "hash": "7b8a943360fdabb0d9d6bf672ea2e92c62c388d58956e2c9c304bdbef2882503"
+          },
+          {
+            "ts": "2026-10-06T12:14:04.040000+00:00",
+            "request_id": "4d438801672d6cd9f321be46ca02fc13",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/evaluate",
+            "status": 200,
+            "username": "admin",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 5,
+            "prev_hash": "7b8a943360fdabb0d9d6bf672ea2e92c62c388d58956e2c9c304bdbef2882503",
+            "hash": "d320199fc8ca3f4bd580735ab7ff47f79ac921fc9aedbf7a603bd253c70e245b"
+          },
+          {
+            "ts": "2026-10-06T12:21:00.750000+00:00",
+            "request_id": "5b9d0d8cfaa197ef0580569f13422a5e",
+            "event": "resume_uploaded",
+            "filename": "AI_Engineer_Daniel_Reddy.txt",
+            "text_sha256": "aab5787a1200e7832a713d42a46cb4eb136dfb99b794df50d2238d6f19b5a74e",
+            "chars": 367,
+            "pii_types": {
+              "email": 1,
+              "phone": 1
+            },
+            "prev_hash": "d320199fc8ca3f4bd580735ab7ff47f79ac921fc9aedbf7a603bd253c70e245b",
+            "hash": "4d39b43fd55154160d333f932c7208bf48e162747bd30d6f6de1006ff665e192"
+          },
+          {
+            "ts": "2026-10-06T12:21:01.085000+00:00",
+            "request_id": "5b9d0d8cfaa197ef0580569f13422a5e",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/upload-resume",
+            "status": 200,
+            "username": "recruiter",
+            "role": "recruiter",
+            "outcome": "allowed",
+            "duration_ms": 36,
+            "prev_hash": "4d39b43fd55154160d333f932c7208bf48e162747bd30d6f6de1006ff665e192",
+            "hash": "c57bdadf77c8bd453cd753b7dd24dd5c91203ee00a893ac513b023c0f3da5284"
+          },
+          {
+            "ts": "2026-10-06T12:21:01.938000+00:00",
+            "request_id": "3d54a57781c400afa341264f067798af",
+            "event": "pii_detected",
+            "flags": [
+              "resume: email x1",
+              "resume: phone x1"
+            ],
+            "redacted_before_llm": true,
+            "prev_hash": "c57bdadf77c8bd453cd753b7dd24dd5c91203ee00a893ac513b023c0f3da5284",
+            "hash": "a7b721e6d6d4b306b493a8d90b7a73a4ff211bb6aadc8b7b6834fe6e2f26b3ee"
+          },
+          {
+            "ts": "2026-10-06T12:21:02.131000+00:00",
+            "request_id": "3d54a57781c400afa341264f067798af",
+            "event": "llm_call",
+            "tool": "gemini.structured_output",
+            "model": "gemini-2.5-flash",
+            "region": "eu",
+            "temperature": 0,
+            "latency_ms": 2917,
+            "status": "ok",
+            "prev_hash": "a7b721e6d6d4b306b493a8d90b7a73a4ff211bb6aadc8b7b6834fe6e2f26b3ee",
+            "hash": "2c8c5d6368c0832e5a6ae910d58b3cf5d490457654f511cb3cbe6d8f7ac5a3d8"
+          },
+          {
+            "ts": "2026-10-06T12:21:02.375000+00:00",
+            "request_id": "3d54a57781c400afa341264f067798af",
+            "event": "evaluation_created",
+            "evaluation_id": "20261006-122100-000000",
+            "performed_by": "recruiter",
+            "prev_hash": "2c8c5d6368c0832e5a6ae910d58b3cf5d490457654f511cb3cbe6d8f7ac5a3d8",
+            "hash": "0b06ece7e1c7c4203a19956a6358134170dcf51b67f520d134fee104f6147d99"
+          },
+          {
+            "ts": "2026-10-06T12:21:02.521000+00:00",
+            "request_id": "3d54a57781c400afa341264f067798af",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/evaluate",
+            "status": 200,
+            "username": "recruiter",
+            "role": "recruiter",
+            "outcome": "allowed",
+            "duration_ms": 19,
+            "prev_hash": "0b06ece7e1c7c4203a19956a6358134170dcf51b67f520d134fee104f6147d99",
+            "hash": "0dd40d2c4e54e955938e3274de6e74c47cb2d932233fbea91e68947140207e9f"
+          },
+          {
+            "ts": "2026-10-07T12:28:01.514000+00:00",
+            "request_id": "954624c51382ad36623b62e09d7a9f82",
+            "event": "resume_uploaded",
+            "filename": "AI_Engineer_Tomas_Mehta.txt",
+            "text_sha256": "52f74193f82091801dd01f0f0be4952ea1d50ec5528a1455ca876e8f609c377e",
+            "chars": 363,
+            "pii_types": {
+              "email": 1,
+              "phone": 1,
+              "dob": 1
+            },
+            "prev_hash": "0dd40d2c4e54e955938e3274de6e74c47cb2d932233fbea91e68947140207e9f",
+            "hash": "58444e0e8fe7474b67f0ad16f230d0067877c5933ce94789cc378c81a1d1eaf6"
+          },
+          {
+            "ts": "2026-10-07T12:28:01.742000+00:00",
+            "request_id": "954624c51382ad36623b62e09d7a9f82",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/upload-resume",
+            "status": 200,
+            "username": "admin",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 33,
+            "prev_hash": "58444e0e8fe7474b67f0ad16f230d0067877c5933ce94789cc378c81a1d1eaf6",
+            "hash": "1e4f7efb874fe0bca940243023a8276130844d9485c53379233bc4e2a25aa1fc"
+          },
+          {
+            "ts": "2026-10-07T12:28:02.697000+00:00",
+            "request_id": "12f13fc2d8ab714741f56a70431bd81a",
+            "event": "pii_detected",
+            "flags": [
+              "resume: email x1",
+              "resume: phone x1",
+              "resume: dob x1"
+            ],
+            "redacted_before_llm": true,
+            "prev_hash": "1e4f7efb874fe0bca940243023a8276130844d9485c53379233bc4e2a25aa1fc",
+            "hash": "ffde59a24306e66f63070a60a011f7856d7596675a14dcfb201028aff02dc4aa"
+          },
+          {
+            "ts": "2026-10-07T12:28:02.808000+00:00",
+            "request_id": "12f13fc2d8ab714741f56a70431bd81a",
+            "event": "llm_call",
+            "tool": "gemini.structured_output",
+            "model": "gemini-2.5-flash",
+            "region": "eu",
+            "temperature": 0,
+            "latency_ms": 2008,
+            "status": "ok",
+            "prev_hash": "ffde59a24306e66f63070a60a011f7856d7596675a14dcfb201028aff02dc4aa",
+            "hash": "945fbe3588f20af704f4abc094ec6f14854bd2ffe70d1b3889f58d6efb66002e"
+          },
+          {
+            "ts": "2026-10-07T12:28:03.117000+00:00",
+            "request_id": "12f13fc2d8ab714741f56a70431bd81a",
+            "event": "evaluation_created",
+            "evaluation_id": "20261007-122800-000000",
+            "performed_by": "admin",
+            "prev_hash": "945fbe3588f20af704f4abc094ec6f14854bd2ffe70d1b3889f58d6efb66002e",
+            "hash": "78ca0fdb559930ef890d6ce4e4176db6eb9044efa697bfc63ac804c328a1fd08"
+          },
+          {
+            "ts": "2026-10-07T12:28:03.454000+00:00",
+            "request_id": "12f13fc2d8ab714741f56a70431bd81a",
+            "event": "http_request",
+            "method": "POST",
+            "path": "/evaluate",
+            "status": 200,
+            "username": "admin",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 7,
+            "prev_hash": "78ca0fdb559930ef890d6ce4e4176db6eb9044efa697bfc63ac804c328a1fd08",
+            "hash": "4bbeeea80dac8d1dcb2c7410881afb307efa59bae98a514ed2777a9a1186771a"
+          },
+          {
+            "ts": "2026-10-08T11:35:02.566000+00:00",
+            "request_id": "78e3aaaf12ae0fe00c25ff1f2ee75d4a",
+            "event": "http_request",
+            "method": "GET",
+            "path": "/evaluations",
+            "status": 200,
+            "username": "admin",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 52,
+            "prev_hash": "4bbeeea80dac8d1dcb2c7410881afb307efa59bae98a514ed2777a9a1186771a",
+            "hash": "9e63f6e8e12a7be8e1de4da51eb4270fdcce46bfa2e713e14e39afd78ae4f9f3"
+          },
+          {
+            "ts": "2026-10-08T11:35:04.929000+00:00",
+            "request_id": "99e276710f235c03e7fa14e7f454f134",
+            "event": "http_request",
+            "method": "GET",
+            "path": "/evaluations",
+            "status": 401,
+            "username": null,
+            "role": "anonymous",
+            "outcome": "denied",
+            "duration_ms": 24,
+            "prev_hash": "9e63f6e8e12a7be8e1de4da51eb4270fdcce46bfa2e713e14e39afd78ae4f9f3",
+            "hash": "9623b4f05dd8ae1f2ce4a4680ef20ff16712115466c0796c126abf5800542a5f"
+          },
+          {
+            "ts": "2026-10-08T11:35:05.571000+00:00",
+            "request_id": "9d752cc15cc1c9323e50eed5e7a8fdee",
+            "event": "http_request",
+            "method": "GET",
+            "path": "/evaluations",
+            "status": 403,
+            "username": "recruiter",
+            "role": "recruiter",
+            "outcome": "denied",
+            "duration_ms": 33,
+            "prev_hash": "9623b4f05dd8ae1f2ce4a4680ef20ff16712115466c0796c126abf5800542a5f",
+            "hash": "1365b66a5235d23a688c1ab2da14f029d07bbef2933eb0e2fc741f17c471f6e7"
+          },
+          {
+            "ts": "2026-10-08T11:35:06.243000+00:00",
+            "request_id": "8517a6ad554755fb8485d05aa05acc3f",
+            "event": "http_request",
+            "method": "GET",
+            "path": "/evaluations/20261005-120000-000000",
+            "status": 200,
+            "username": "admin",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 24,
+            "prev_hash": "1365b66a5235d23a688c1ab2da14f029d07bbef2933eb0e2fc741f17c471f6e7",
+            "hash": "351cc18174a2b49b22c75680c6a8369a6f510baef009860f87aff099e9f72f18"
+          },
+          {
+            "ts": "2026-10-08T11:35:06.891000+00:00",
+            "request_id": "554591ee63ba9faec926adaee2e5e645",
+            "event": "http_request",
+            "method": "GET",
+            "path": "/evaluations/20261005-120000-000000/evidence",
+            "status": 200,
+            "username": "admin",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 39,
+            "prev_hash": "351cc18174a2b49b22c75680c6a8369a6f510baef009860f87aff099e9f72f18",
+            "hash": "58c10994ca841c13e4f636fd17d88941491810f831c91a62927297a2e6fb7b88"
+          },
+          {
+            "ts": "2026-10-08T11:35:08.973000+00:00",
+            "request_id": "ceff0122c9e636f6d91c24b5a060dd25",
+            "event": "http_request",
+            "method": "GET",
+            "path": "/evaluations/20261005-120000-000000/verify",
+            "status": 200,
+            "username": "admin",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 4,
+            "prev_hash": "58c10994ca841c13e4f636fd17d88941491810f831c91a62927297a2e6fb7b88",
+            "hash": "79acb0b1e6b52e838f1c56e8a52aa85d0921fefa2d84bcbf374607c3c8c65f49"
+          },
+          {
+            "ts": "2026-10-08T11:35:11.700000+00:00",
+            "request_id": "bda9f7bd3fdd76724bb54c460fe87a2a",
+            "event": "http_request",
+            "method": "GET",
+            "path": "/evaluations/20261005-120700-000000",
+            "status": 200,
+            "username": "admin",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 24,
+            "prev_hash": "79acb0b1e6b52e838f1c56e8a52aa85d0921fefa2d84bcbf374607c3c8c65f49",
+            "hash": "e5f75c45c94689081280dbfa74391de4d373fc0eb8bbf62ee3649e88f3db95ec"
+          },
+          {
+            "ts": "2026-10-08T11:35:12.531000+00:00",
+            "request_id": "cee2597ea075664c29a6751a001442f2",
+            "event": "http_request",
+            "method": "GET",
+            "path": "/evaluations/20261005-120700-000000/evidence",
+            "status": 200,
+            "username": "admin",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 58,
+            "prev_hash": "e5f75c45c94689081280dbfa74391de4d373fc0eb8bbf62ee3649e88f3db95ec",
+            "hash": "3a8111f35b963d96a922eba756df30b60aa916a6268a6bbb9f444e108082a74b"
+          },
+          {
+            "ts": "2026-10-08T11:35:14.517000+00:00",
+            "request_id": "68fad83379e55df5c5c7229846341261",
+            "event": "http_request",
+            "method": "GET",
+            "path": "/evaluations/20261005-120700-000000/verify",
+            "status": 200,
+            "username": "admin",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 49,
+            "prev_hash": "3a8111f35b963d96a922eba756df30b60aa916a6268a6bbb9f444e108082a74b",
+            "hash": "89b2633bd254b7639acc33c552a25fed8850f516c94aa7adf1cd2dbd47eed7cd"
+          },
+          {
+            "ts": "2026-10-08T11:35:16.663000+00:00",
+            "request_id": "8906c406e6aa4e2a99c8dff624db6f3d",
+            "event": "http_request",
+            "method": "GET",
+            "path": "/evaluations/20261006-121400-000000",
+            "status": 200,
+            "username": "admin",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 52,
+            "prev_hash": "89b2633bd254b7639acc33c552a25fed8850f516c94aa7adf1cd2dbd47eed7cd",
+            "hash": "085057faf42eb460c05883ef1430f4cdefae9a47b6603ffed57016eb73bb6163"
+          },
+          {
+            "ts": "2026-10-08T11:35:19.517000+00:00",
+            "request_id": "2a23b9f7df9ab8536718cfefa43f64ed",
+            "event": "http_request",
+            "method": "GET",
+            "path": "/evaluations/20261006-121400-000000/evidence",
+            "status": 200,
+            "username": "admin",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 25,
+            "prev_hash": "085057faf42eb460c05883ef1430f4cdefae9a47b6603ffed57016eb73bb6163",
+            "hash": "5e3ea4dbf820a3772b439c85717605cf4b5e00c024b74f4668fc59eb142082c3"
+          },
+          {
+            "ts": "2026-10-08T11:35:21.555000+00:00",
+            "request_id": "3c6f8293d119d45f300a4ad4d8423a33",
+            "event": "http_request",
+            "method": "GET",
+            "path": "/evaluations/20261006-121400-000000/verify",
+            "status": 200,
+            "username": "admin",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 53,
+            "prev_hash": "5e3ea4dbf820a3772b439c85717605cf4b5e00c024b74f4668fc59eb142082c3",
+            "hash": "f96aacc58440a1847068bc3dad811d2516ca37fa2a1201fc8468fa63228c414c"
+          },
+          {
+            "ts": "2026-10-08T11:35:22.510000+00:00",
+            "request_id": "2b60d517dfb2a139d66de8fb0454c8c4",
+            "event": "http_request",
+            "method": "GET",
+            "path": "/evaluations/20261006-122100-000000",
+            "status": 200,
+            "username": "admin",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 27,
+            "prev_hash": "f96aacc58440a1847068bc3dad811d2516ca37fa2a1201fc8468fa63228c414c",
+            "hash": "d83bd40bb633474a0dba8d8a80b9c297d754e544081333eeb22e3061eeff6ed7"
+          },
+          {
+            "ts": "2026-10-08T11:35:25.051000+00:00",
+            "request_id": "94b5d438c101da037af83bf6c0bf7fc6",
+            "event": "http_request",
+            "method": "GET",
+            "path": "/evaluations/20261006-122100-000000/evidence",
+            "status": 200,
+            "username": "admin",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 12,
+            "prev_hash": "d83bd40bb633474a0dba8d8a80b9c297d754e544081333eeb22e3061eeff6ed7",
+            "hash": "0db010f1735acd05af3b76abb76f8af5f18c75ebf0e7adc2fd2cc4c793bdc0ab"
+          },
+          {
+            "ts": "2026-10-08T11:35:27.345000+00:00",
+            "request_id": "9aa9c35af1c8b7ded4ea4978729a744c",
+            "event": "http_request",
+            "method": "GET",
+            "path": "/evaluations/20261006-122100-000000/verify",
+            "status": 200,
+            "username": "admin",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 59,
+            "prev_hash": "0db010f1735acd05af3b76abb76f8af5f18c75ebf0e7adc2fd2cc4c793bdc0ab",
+            "hash": "f77d351c90f931140b5fd8723586606e5f7fb8c5757672e2227f377a886d1384"
+          },
+          {
+            "ts": "2026-10-08T11:35:27.910000+00:00",
+            "request_id": "ef8dc4272432f015585a8c20f8259441",
+            "event": "http_request",
+            "method": "GET",
+            "path": "/evaluations/20261007-122800-000000",
+            "status": 200,
+            "username": "admin",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 42,
+            "prev_hash": "f77d351c90f931140b5fd8723586606e5f7fb8c5757672e2227f377a886d1384",
+            "hash": "4c4c0233c5b3331f6a37de4905e4b6e74c0ffa5f3cacd29800b94609339db824"
+          },
+          {
+            "ts": "2026-10-08T11:35:29.178000+00:00",
+            "request_id": "3aba7c577282ef4d7c25ffe2f94055b3",
+            "event": "http_request",
+            "method": "GET",
+            "path": "/evaluations/20261007-122800-000000/evidence",
+            "status": 200,
+            "username": "admin",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 48,
+            "prev_hash": "4c4c0233c5b3331f6a37de4905e4b6e74c0ffa5f3cacd29800b94609339db824",
+            "hash": "8eb406ff4a899d7695834b2eb099f4d36a5c9be074bc6354186916fd9d3f2830"
+          },
+          {
+            "ts": "2026-10-08T11:35:29.923000+00:00",
+            "request_id": "776276bad26a41f84703b8dd5dd03b43",
+            "event": "http_request",
+            "method": "GET",
+            "path": "/evaluations/20261007-122800-000000/verify",
+            "status": 200,
+            "username": "admin",
+            "role": "admin",
+            "outcome": "allowed",
+            "duration_ms": 23,
+            "prev_hash": "8eb406ff4a899d7695834b2eb099f4d36a5c9be074bc6354186916fd9d3f2830",
+            "hash": "382762bf254c3ba777e6969bd708ae571d1691a042ed7f79f9e23db23d65e7cf"
+          },
+          {
+            "ts": "2026-10-08T11:35:31.236000+00:00",
+            "request_id": "ad14cf0235c7ed60c26ed05c8ed6a122",
+            "event": "http_request",
+            "method": "GET",
+            "path": "/evaluations/20261007-122800-000000/evidence",
+            "status": 403,
+            "username": "recruiter",
+            "role": "recruiter",
+            "outcome": "denied",
+            "duration_ms": 25,
+            "prev_hash": "382762bf254c3ba777e6969bd708ae571d1691a042ed7f79f9e23db23d65e7cf",
+            "hash": "b1f93602e0975d11d2bc26602dacb12f7ca490a419f2813964ade696d6afbd78"
+          },
+          {
+            "ts": "2026-10-08T11:35:32.257000+00:00",
+            "request_id": "658c03d2a402a73da0a2ac56ffabbff8",
+            "event": "http_request",
+            "method": "GET",
+            "path": "/compliance/audit-log",
+            "status": 403,
+            "username": "recruiter",
+            "role": "recruiter",
+            "outcome": "denied",
+            "duration_ms": 9,
+            "prev_hash": "b1f93602e0975d11d2bc26602dacb12f7ca490a419f2813964ade696d6afbd78",
+            "hash": "d1a6b533ee48e6ba9f7d405488113eacdfb7c172a3a899adca339d478e99e8e1"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "flow": "evidence_verify",
+  "exchanges": [
+    {
+      "request": {
+        "method": "GET",
+        "path": "/evaluations/20260903-120000-000000/verify",
+        "role": "admin"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "2f7348bf74c889b64710ce55236a4389"
+        },
+        "body": {
+          "ok": false,
+          "reason": "missing evidence or manifest",
+          "files": {}
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "path": "/evaluations/20261002-120700-000000/verify",
+        "role": "admin"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "cb363a980ea48c452173bf381934cbb0"
+        },
+        "body": {
+          "ok": true,
+          "reason": "",
+          "files": {
+            "jd.txt": true,
+            "resume.txt": true,
+            "audit.json": true,
+            "evidence.json": true
+          },
+          "run_hash_ok": true
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "path": "/evaluations/20261003-121400-000000/verify",
+        "role": "admin"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "4870510406d15ee8b04007b56c3f1051"
+        },
+        "body": {
+          "ok": true,
+          "reason": "",
+          "files": {
+            "jd.txt": true,
+            "resume.txt": true,
+            "audit.json": true,
+            "evidence.json": true
+          },
+          "run_hash_ok": true
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "path": "/evaluations/20261005-122100-000000/verify",
+        "role": "admin"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "3f63eee044f98327f5e6a8856a621648"
+        },
+        "body": {
+          "ok": true,
+          "reason": "",
+          "files": {
+            "jd.txt": true,
+            "resume.txt": true,
+            "audit.json": true,
+            "evidence.json": true
+          },
+          "run_hash_ok": true
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "path": "/evaluations/20261006-122800-000000/verify",
+        "role": "admin"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "a35b28af18223143bfa5842bbbb8f91f"
+        },
+        "body": {
+          "ok": true,
+          "reason": "",
+          "files": {
+            "jd.txt": true,
+            "resume.txt": true,
+            "audit.json": true,
+            "evidence.json": true
+          },
+          "run_hash_ok": true
+        }
+      }
+    }
+  ]
+}

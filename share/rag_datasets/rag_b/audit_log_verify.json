@@ -1,0 +1,23 @@
+{
+  "flow": "audit_log_verify",
+  "exchanges": [
+    {
+      "request": {
+        "method": "GET",
+        "path": "/admin/audit-log/verify",
+        "role": "admin"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "348191f4baa6125ec176e1697a90a5f6"
+        },
+        "body": {
+          "ok": false,
+          "entries": 50,
+          "broken_at": 27
+        }
+      }
+    }
+  ]
+}

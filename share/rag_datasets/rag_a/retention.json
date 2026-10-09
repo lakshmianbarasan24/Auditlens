@@ -1,0 +1,66 @@
+{
+  "flow": "retention",
+  "exchanges": [
+    {
+      "retention_days": 30,
+      "stored_conversations": [
+        {
+          "conversation_id": "conv-a5951c43",
+          "user": "cust_acme",
+          "created_at": "2026-10-08T10:00:03.041000",
+          "age_days": 0
+        },
+        {
+          "conversation_id": "conv-f28be913",
+          "user": "cust_acme",
+          "created_at": "2026-10-08T10:11:02.556000",
+          "age_days": 0
+        },
+        {
+          "conversation_id": "conv-e31e8b28",
+          "user": "cust_globex",
+          "created_at": "2026-10-08T10:22:03.811000",
+          "age_days": 0
+        },
+        {
+          "conversation_id": "conv-a67880fa",
+          "user": "cust_acme",
+          "created_at": "2026-10-08T10:33:03.115000",
+          "age_days": 0
+        },
+        {
+          "conversation_id": "conv-2cd03579",
+          "user": "agent_ravi",
+          "created_at": "2026-10-08T10:44:03.542000",
+          "age_days": 0
+        },
+        {
+          "conversation_id": "conv-b4c4a4e9",
+          "user": "cust_globex",
+          "created_at": "2026-10-08T10:55:03.439000",
+          "age_days": 0
+        },
+        {
+          "conversation_id": "conv-c2365a3f",
+          "user": "admin_root",
+          "created_at": "2026-10-06T12:00:00",
+          "age_days": 2
+        },
+        {
+          "conversation_id": "conv-7eb3bcae",
+          "user": "admin_root",
+          "created_at": "2026-10-03T12:00:00",
+          "age_days": 5
+        },
+        {
+          "conversation_id": "conv-9467873a",
+          "user": "admin_root",
+          "created_at": "2026-09-29T12:00:00",
+          "age_days": 9
+        }
+      ],
+      "expired_count": 0,
+      "expired": []
+    }
+  ]
+}

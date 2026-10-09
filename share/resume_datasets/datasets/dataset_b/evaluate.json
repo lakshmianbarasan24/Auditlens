@@ -1,0 +1,222 @@
+{
+  "flow": "evaluate",
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "path": "/evaluate",
+        "role": "anonymous"
+      },
+      "response": {
+        "status": 401,
+        "headers": {
+          "X-Request-ID": "91fd9cf624c6fe33479db6f833ef0f53"
+        },
+        "body": {
+          "detail": "Not authenticated"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/evaluate",
+        "role": "admin",
+        "body": {
+          "jd_text": "",
+          "resume_text": "<resume>"
+        }
+      },
+      "response": {
+        "status": 422,
+        "headers": {
+          "X-Request-ID": "1b6faf864a70fadd64abdb88620d9a8e"
+        },
+        "body": {
+          "detail": [
+            {
+              "type": "string_too_short",
+              "loc": [
+                "body",
+                "jd_text"
+              ],
+              "msg": "String should have at least 1 character",
+              "input": "",
+              "ctx": {
+                "min_length": 1
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/evaluate",
+        "role": "recruiter",
+        "body": {
+          "jd_text": "<jd>",
+          "resume_text": "<resume>"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "d8be237c7933cdc0379c6b9dbdfefab0"
+        },
+        "body": {
+          "fit_score": 73,
+          "recommendation": "Hold",
+          "matched_skills": [
+            "Python",
+            "Prompt engineering",
+            "REST APIs",
+            "RAG pipelines",
+            "Vector databases",
+            "Docker"
+          ],
+          "missing_skills": [
+            "LangChain",
+            "FastAPI",
+            "AWS",
+            "Evaluation frameworks"
+          ],
+          "justification": "Candidate's current role is AI Engineer; 5 of 7 required and 1 of 3 preferred skills are explicitly present.",
+          "injection_flags": [],
+          "pii_flags": [
+            "resume: email x1",
+            "resume: phone x1",
+            "resume: dob x1"
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/evaluate",
+        "role": "admin",
+        "body": {
+          "jd_text": "<jd>",
+          "resume_text": "<resume>"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "92fd032b4aaac924be8d681009a19db9"
+        },
+        "body": {
+          "fit_score": 61,
+          "recommendation": "Hold",
+          "matched_skills": [
+            "Python",
+            "FastAPI",
+            "RAG pipelines",
+            "Vector databases",
+            "Docker",
+            "Evaluation frameworks"
+          ],
+          "missing_skills": [
+            "LangChain",
+            "Prompt engineering",
+            "REST APIs",
+            "AWS"
+          ],
+          "justification": "Candidate's current role is AI Engineer; 4 of 7 required and 2 of 3 preferred skills are explicitly present.",
+          "injection_flags": [],
+          "pii_flags": [
+            "resume: email x1",
+            "resume: phone x1",
+            "resume: dob x1"
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/evaluate",
+        "role": "recruiter",
+        "body": {
+          "jd_text": "<jd>",
+          "resume_text": "<resume>"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "077795a334348ffc60008dc0b07516a7"
+        },
+        "body": {
+          "fit_score": 70,
+          "recommendation": "Hold",
+          "matched_skills": [
+            "Python",
+            "REST APIs",
+            "FastAPI",
+            "RAG pipelines",
+            "Vector databases"
+          ],
+          "missing_skills": [
+            "LangChain",
+            "Prompt engineering",
+            "Docker",
+            "AWS",
+            "Evaluation frameworks"
+          ],
+          "justification": "Candidate's current role is Business Analyst; 5 of 7 required and 0 of 3 preferred skills are explicitly present. Score capped because candidate's current specialization (Business Analyst) differs from the role's (LLM application engineering).",
+          "injection_flags": [],
+          "pii_flags": [
+            "resume: email x1",
+            "resume: phone x1",
+            "resume: dob x1"
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/evaluate",
+        "role": "admin",
+        "body": {
+          "jd_text": "<jd>",
+          "resume_text": "<resume>"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "f359a8a63d8a79fb8f1755a6dde2e25d"
+        },
+        "body": {
+          "fit_score": 57,
+          "recommendation": "Hold",
+          "matched_skills": [
+            "Python",
+            "REST APIs",
+            "RAG pipelines",
+            "Vector databases"
+          ],
+          "missing_skills": [
+            "LangChain",
+            "Prompt engineering",
+            "FastAPI",
+            "Docker",
+            "AWS",
+            "Evaluation frameworks"
+          ],
+          "justification": "Candidate's current role is Data Analyst; 4 of 7 required and 0 of 3 preferred skills are explicitly present.",
+          "injection_flags": [],
+          "pii_flags": [
+            "resume: email x1",
+            "resume: phone x1",
+            "resume: dob x1"
+          ]
+        }
+      }
+    }
+  ]
+}

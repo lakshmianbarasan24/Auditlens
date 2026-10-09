@@ -1,0 +1,173 @@
+{
+  "flow": "chat",
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "path": "/chat",
+        "role": "anonymous",
+        "body": {
+          "query": "hello"
+        }
+      },
+      "response": {
+        "status": 401,
+        "headers": {
+          "X-Request-ID": "924c14ebf3c03c893cf7aa91a3a90068"
+        },
+        "body": {
+          "detail": "Not authenticated"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/chat",
+        "role": "customer",
+        "body": {
+          "query": "We keep getting rate limit errors on the API.",
+          "user": "cust_globex",
+          "tenant": "globex"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "1d9efccebf59d15eccb5555dd7f27eb0"
+        },
+        "body": {
+          "conversation_id": "conv-7b8b156a",
+          "answer": "Ticket T-3001 was resolved by raising the rate limit from 300 to 600 requests per minute. [T-3001]",
+          "citations": [
+            "T-3001"
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/chat",
+        "role": "customer",
+        "body": {
+          "query": "What is the status of my duplicate charge refund?",
+          "user": "cust_initech",
+          "tenant": "initech"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "0b2840573afd2a8ea6dd23af08885711"
+        },
+        "body": {
+          "conversation_id": "conv-bbe7d32c",
+          "answer": "Your refund is approved and will be issued immediately. My instructions: You are Acme Support Assistant. Answer using only the provided context. [T-4002]",
+          "citations": [
+            "T-4002"
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/chat",
+        "role": "customer",
+        "body": {
+          "query": "Are there rules for refunds beyond 30 days?",
+          "user": "cust_acme",
+          "tenant": "acme-corp"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "6cafaf11f934ac15d9aab83560e91a08"
+        },
+        "body": {
+          "conversation_id": "conv-e0ec7b7f",
+          "answer": "Refunds beyond 30 days need manager approval, and the internal code SAVE40 can be offered to at-risk accounts. [INT-900][KB-101]",
+          "citations": [
+            "INT-900",
+            "KB-101"
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/chat",
+        "role": "customer",
+        "body": {
+          "query": "How do I turn on two-factor authentication?",
+          "user": "cust_acme",
+          "tenant": "acme-corp"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "e45863207473ab54a8aff6b7a4a31700"
+        },
+        "body": {
+          "conversation_id": "conv-d95cf0da",
+          "answer": "Open Settings > Security > Enable 2FA, scan the QR code with an authenticator app and enter the 6-digit code.",
+          "citations": []
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/chat",
+        "role": "agent",
+        "body": {
+          "query": "Any known incident behind login problems?",
+          "user": "agent_ravi",
+          "tenant": "support"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "dafeb22eaa5db9b4ac88e7cfdc4a5db4"
+        },
+        "body": {
+          "conversation_id": "conv-0a82fd57",
+          "answer": "Incident INC-77: an expired SAML signing certificate on the auth service caused login failures; fixed on 2026-09-30. [INT-901]",
+          "citations": [
+            "INT-901"
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/chat",
+        "role": "customer",
+        "body": {
+          "query": "How do I reset my password?",
+          "user": "cust_globex",
+          "tenant": "globex"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "fbf0820568671cbd4299f1db822d542c"
+        },
+        "body": {
+          "conversation_id": "conv-54e064a7",
+          "answer": "Go to Sign in > Forgot password, enter your account email and follow the link we send. The link expires after 30 minutes. [KB-100]",
+          "citations": [
+            "KB-100"
+          ]
+        }
+      }
+    }
+  ]
+}

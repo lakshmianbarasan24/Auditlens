@@ -1,0 +1,143 @@
+{
+  "flow": "upload_resume",
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "path": "/upload-resume",
+        "role": "admin",
+        "body": {
+          "file": "payload.exe"
+        }
+      },
+      "response": {
+        "status": 400,
+        "headers": {
+          "X-Request-ID": "b6d2590dfd9f0e25762c5366248a141c"
+        },
+        "body": {
+          "detail": "Unsupported file type: .exe"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/upload-resume",
+        "role": "anonymous",
+        "body": {
+          "file": "resume.pdf"
+        }
+      },
+      "response": {
+        "status": 401,
+        "headers": {
+          "X-Request-ID": "892a486ad560aaa5c3d6543d05f68f2f"
+        },
+        "body": {
+          "detail": "Not authenticated"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/upload-resume",
+        "role": "admin",
+        "body": {
+          "file": "Java_Developer_Priya_Rao.txt"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "989dff477c27a2dc5dc9861c754ce90f"
+        },
+        "body": {
+          "filename": "Java_Developer_Priya_Rao.txt",
+          "resume_text": "Priya Rao\nEmail: priya.rao@example.com | Phone: +91 98933 12167\n\nSUMMARY\nJava Developer with 6 years of experience building and shipping software.\n\nSKILLS\nJira, Pandas, LangChain, RAG pipelines, Linux\n\nEXPERIENCE\nJava Developer, Orchid Analytics (2020 - Present)\nAI Engineer, Bluepeak Tech (2016 - 2023)\n\nEDUCATION\nB.Tech, Computer Science\n"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/upload-resume",
+        "role": "recruiter",
+        "body": {
+          "file": "Business_Analyst_Sneha_Walker.txt"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "77db5f349dfff3bbf2f315e368717a91"
+        },
+        "body": {
+          "filename": "Business_Analyst_Sneha_Walker.txt",
+          "resume_text": "Sneha Walker\nEmail: sneha.walker@example.com | Phone: +91 98747 75996\nDOB: 12 Mar 1990\n\nSUMMARY\nBusiness Analyst with 10 years of experience building and shipping software.\n\nSKILLS\nLinux, Docker, Jira, Python, Vector databases, LangChain, Pandas\n\nEXPERIENCE\nBusiness Analyst, Helix Systems (2020 - Present)\nAI Engineer, Kestrel Data (2016 - 2022)\n\nEDUCATION\nB.Tech, Computer Science\n"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/upload-resume",
+        "role": "admin",
+        "body": {
+          "file": "QA_Engineer_Rahul_Fischer.txt"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "b7e4c3fe478cd64b7d1a962715db961e"
+        },
+        "body": {
+          "filename": "QA_Engineer_Rahul_Fischer.txt",
+          "resume_text": "Rahul Fischer\nEmail: rahul.fischer@example.com | Phone: +1 (415) 555-0128\n\nSUMMARY\nQA Engineer with 11 years of experience building and shipping software.\n\nSKILLS\nSQL, RAG pipelines, Tableau, Git\n\nEXPERIENCE\nQA Engineer, Northwind Labs (2020 - Present)\n\nEDUCATION\nB.Tech, Computer Science\n"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/upload-resume",
+        "role": "recruiter",
+        "body": {
+          "file": "Network_Engineer_Daniel_Nair.txt"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "4aa7723ccb690f10e1e9efe3ddc0069c"
+        },
+        "body": {
+          "filename": "Network_Engineer_Daniel_Nair.txt",
+          "resume_text": "Daniel Nair\nEmail: daniel.nair@example.com | Phone: +91 98902 44649\n\nSUMMARY\nNetwork Engineer with 3 years of experience building and shipping software.\n\nSKILLS\nPandas, Git, Excel, Python, RAG pipelines, REST APIs\n\nEXPERIENCE\nNetwork Engineer, Kestrel Data (2020 - Present)\nAI Engineer, Orchid Analytics (2016 - 2024)\n\nEDUCATION\nB.Tech, Computer Science\n"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/upload-resume",
+        "role": "admin",
+        "body": {
+          "file": "Network_Engineer_Tomas_Rao.txt"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "bc983b844a4ddd782441a2d12e62843c"
+        },
+        "body": {
+          "filename": "Network_Engineer_Tomas_Rao.txt",
+          "resume_text": "Tomas Rao\nEmail: tomas.rao@example.com | Phone: +1 (415) 555-0170\nDOB: 24 Mar 1996\n\nSUMMARY\nNetwork Engineer with 9 years of experience building and shipping software.\n\nSKILLS\nLinux, Vector databases, LangChain, Tableau, AWS, Git\n\nEXPERIENCE\nNetwork Engineer, Vantage Soft (2020 - Present)\nAI Engineer, Helix Systems (2016 - 2021)\n\nEDUCATION\nB.Tech, Computer Science\n"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "flow": "health",
+  "exchanges": [
+    {
+      "request": {
+        "method": "GET",
+        "path": "/health",
+        "role": "anonymous"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "17147019a1d0d0f509ac23a7d2b5e0c9"
+        },
+        "body": {
+          "status": "ok"
+        }
+      }
+    }
+  ]
+}

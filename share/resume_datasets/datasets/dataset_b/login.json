@@ -1,0 +1,69 @@
+{
+  "flow": "login",
+  "exchanges": [
+    {
+      "request": {
+        "method": "POST",
+        "path": "/auth/login",
+        "role": "anonymous",
+        "body": {
+          "username": "admin",
+          "password": "***"
+        }
+      },
+      "response": {
+        "status": 401,
+        "headers": {
+          "X-Request-ID": "4ad242931a109c8e4ffa25f65a698691"
+        },
+        "body": {
+          "detail": "Incorrect username or password"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/auth/login",
+        "role": "anonymous",
+        "body": {
+          "username": "admin",
+          "password": "***"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "7a4b5dc2d8db886d48fbd37faa1eef39"
+        },
+        "body": {
+          "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTc5MTUyNzQwMH0.2inBx72wfdoB6niyWjci-FoLqvuex09p_MpZu2DO3jQ",
+          "token_type": "bearer",
+          "role": "admin"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/auth/login",
+        "role": "anonymous",
+        "body": {
+          "username": "recruiter",
+          "password": "***"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "42e7cd1d57531eaa941d67ae7ad37acc"
+        },
+        "body": {
+          "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyZWNydWl0ZXIiLCJyb2xlIjoicmVjcnVpdGVyIiwiZXhwIjoxNzkxNTI3NDAwfQ.umWBbHdS2VYAHS-z5DhHVUXnw1kH9UjDR8ihvJXGywE",
+          "token_type": "bearer",
+          "role": "recruiter"
+        }
+      }
+    }
+  ]
+}

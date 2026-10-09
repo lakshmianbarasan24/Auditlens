@@ -1,0 +1,43 @@
+{
+  "flow": "retention",
+  "exchanges": [
+    {
+      "request": {
+        "method": "GET",
+        "path": "/compliance/retention",
+        "role": "admin"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "cc7830a414abf139e744161f475b8b45"
+        },
+        "body": {
+          "retention_days": 30,
+          "expired_count": 0,
+          "expired": []
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "path": "/compliance/retention/purge",
+        "role": "admin"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "8c57ddcd1ddd7a7495c96738f14305d8"
+        },
+        "body": {
+          "retention_days": 30,
+          "expired_count": 0,
+          "expired": [],
+          "dry_run": true,
+          "deleted": 0
+        }
+      }
+    }
+  ]
+}

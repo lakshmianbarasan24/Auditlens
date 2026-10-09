@@ -1,0 +1,14 @@
+{
+  "flow": "residency_config",
+  "exchanges": [
+    {
+      "llm_provider": "gemini",
+      "llm_model": "gemini-2.5-flash",
+      "llm_region": "us-east-1",
+      "vector_store_region": "eu",
+      "allowed_regions": [
+        "eu"
+      ]
+    }
+  ]
+}

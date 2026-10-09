@@ -1,0 +1,187 @@
+{
+  "flow": "compliance_report",
+  "exchanges": [
+    {
+      "request": {
+        "method": "GET",
+        "path": "/compliance/report",
+        "role": "admin"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "8da04a5ff7237e59c6987129c2d1bf11"
+        },
+        "body": {
+          "rules_version": "1.0.0",
+          "summary": {
+            "pass": 0,
+            "fail": 9,
+            "no_data": 0
+          },
+          "results": [
+            {
+              "rule_id": "PII-01",
+              "title": "No PII in application logs or the audit log",
+              "severity": "high",
+              "status": "fail",
+              "leaks": [
+                {
+                  "source": "audit_log",
+                  "entry": 1,
+                  "field": "username",
+                  "types": {
+                    "email": 1
+                  }
+                },
+                {
+                  "source": "app.log",
+                  "types": {
+                    "email": 1
+                  }
+                }
+              ]
+            },
+            {
+              "rule_id": "PII-02",
+              "title": "No PII is sent to the model provider",
+              "severity": "high",
+              "status": "fail",
+              "evaluations_checked": 5,
+              "leaks": [
+                {
+                  "evaluation": "20260825-120000-000000",
+                  "role": "human",
+                  "types": {
+                    "email": 1,
+                    "phone": 1
+                  }
+                },
+                {
+                  "evaluation": "20260828-120700-000000",
+                  "role": "human",
+                  "types": {
+                    "email": 1,
+                    "phone": 1,
+                    "dob": 1
+                  }
+                }
+              ]
+            },
+            {
+              "rule_id": "ACC-01",
+              "title": "Every request outcome matches the expected-access matrix",
+              "severity": "critical",
+              "status": "fail",
+              "requests_checked": 44,
+              "violations": [
+                {
+                  "entry": 41,
+                  "kind": "wrongly_allowed",
+                  "role": "anonymous",
+                  "method": "GET",
+                  "path": "/evaluations",
+                  "status": 200
+                },
+                {
+                  "entry": 59,
+                  "kind": "wrongly_allowed",
+                  "role": "recruiter",
+                  "method": "GET",
+                  "path": "/compliance/audit-log",
+                  "status": 200
+                }
+              ]
+            },
+            {
+              "rule_id": "ACC-02",
+              "title": "Unauthenticated requests to protected endpoints are rejected",
+              "severity": "critical",
+              "status": "fail",
+              "requests_checked": 3,
+              "violations": [
+                {
+                  "entry": 41,
+                  "method": "GET",
+                  "path": "/evaluations",
+                  "status": 200
+                }
+              ]
+            },
+            {
+              "rule_id": "RET-01",
+              "title": "Stored resumes and evaluations are deleted after the retention window",
+              "severity": "medium",
+              "status": "fail",
+              "retention_days": 30,
+              "expired_count": 2,
+              "expired": [
+                {
+                  "kind": "evaluation",
+                  "name": "20260825-120000-000000",
+                  "age_days": 44.0
+                },
+                {
+                  "kind": "evaluation",
+                  "name": "20260828-120700-000000",
+                  "age_days": 41.0
+                }
+              ]
+            },
+            {
+              "rule_id": "RES-01",
+              "title": "The model provider region is on the allowed list",
+              "severity": "high",
+              "status": "fail",
+              "model": "gemini-2.5-flash",
+              "model_region": "ap-south",
+              "allowed_regions": [
+                "us",
+                "eu"
+              ],
+              "note": "Set MODEL_REGION in .env once the provider's processing region is confirmed."
+            },
+            {
+              "rule_id": "AUD-01",
+              "title": "Every evaluation has sealed evidence whose hashes still verify",
+              "severity": "high",
+              "status": "fail",
+              "evaluations_checked": 5,
+              "problems": [
+                {
+                  "evaluation": "20261005-121400-000000",
+                  "reason": "hash mismatch",
+                  "files": {
+                    "jd.txt": true,
+                    "resume.txt": true,
+                    "audit.json": false,
+                    "evidence.json": true
+                  }
+                }
+              ]
+            },
+            {
+              "rule_id": "AUD-02",
+              "title": "The audit log hash chain is intact",
+              "severity": "critical",
+              "status": "fail",
+              "ok": false,
+              "entries": 66,
+              "broken_at": 5
+            },
+            {
+              "rule_id": "AUD-03",
+              "title": "Audit events and stored evaluations match one-to-one",
+              "severity": "medium",
+              "status": "fail",
+              "evaluations_without_event": [
+                "20261006-122100-000000"
+              ],
+              "events_without_evaluation": []
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

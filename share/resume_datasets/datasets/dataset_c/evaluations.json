@@ -1,0 +1,92 @@
+{
+  "flow": "evaluations",
+  "exchanges": [
+    {
+      "request": {
+        "method": "GET",
+        "path": "/evaluations",
+        "role": "admin"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "X-Request-ID": "78e3aaaf12ae0fe00c25ff1f2ee75d4a"
+        },
+        "body": [
+          {
+            "id": "20261007-122800-000000",
+            "created_at": "2026-10-07T12:28:00",
+            "fit_score": 86,
+            "recommendation": "Advance",
+            "jd_preview": "AI Engineer We are hiring an AI Engineer to build LLM-powered applications. Required skills: Python, LangChain, Prompt engineering, REST APIs, FastAPI, RAG pipe...",
+            "resume_preview": "Tomas Mehta Email: tomas.mehta@example.com | Phone: +91 98560 13029 DOB: 25 Mar 1996 SUMMARY AI Engineer with 3 years of experience building and shipping softwa..."
+          },
+          {
+            "id": "20261006-122100-000000",
+            "created_at": "2026-10-06T12:21:00",
+            "fit_score": 100,
+            "recommendation": "Advance",
+            "jd_preview": "AI Engineer We are hiring an AI Engineer to build LLM-powered applications. Required skills: Python, LangChain, Prompt engineering, REST APIs, FastAPI, RAG pipe...",
+            "resume_preview": "Daniel Reddy Email: daniel.reddy@example.com | Phone: +91 98580 77547 SUMMARY AI Engineer with 10 years of experience building and shipping software. SKILLS Pyt..."
+          },
+          {
+            "id": "20261006-121400-000000",
+            "created_at": "2026-10-06T12:14:00",
+            "fit_score": 88,
+            "recommendation": "Advance",
+            "jd_preview": "AI Engineer We are hiring an AI Engineer to build LLM-powered applications. Required skills: Python, LangChain, Prompt engineering, REST APIs, FastAPI, RAG pipe...",
+            "resume_preview": "Rahul Haddad Email: rahul.haddad@example.com | Phone: +1 (415) 555-0137 SUMMARY AI Engineer with 6 years of experience building and shipping software. SKILLS RA..."
+          },
+          {
+            "id": "20261005-120700-000000",
+            "created_at": "2026-10-05T12:07:00",
+            "fit_score": 92,
+            "recommendation": "Advance",
+            "jd_preview": "AI Engineer We are hiring an AI Engineer to build LLM-powered applications. Required skills: Python, LangChain, Prompt engineering, REST APIs, FastAPI, RAG pipe...",
+            "resume_preview": "Sneha Khan Email: sneha.khan@example.com | Phone: +91 98921 22860 DOB: 6 Mar 1996 SUMMARY AI Engineer with 6 years of experience building and shipping software...."
+          },
+          {
+            "id": "20261005-120000-000000",
+            "created_at": "2026-10-05T12:00:00",
+            "fit_score": 100,
+            "recommendation": "Advance",
+            "jd_preview": "AI Engineer We are hiring an AI Engineer to build LLM-powered applications. Required skills: Python, LangChain, Prompt engineering, REST APIs, FastAPI, RAG pipe...",
+            "resume_preview": "Priya Mehta Email: priya.mehta@example.com | Phone: +1 (415) 555-0130 DOB: 14 Mar 1994 SUMMARY AI Engineer with 7 years of experience building and shipping soft..."
+          }
+        ]
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "path": "/evaluations",
+        "role": "anonymous"
+      },
+      "response": {
+        "status": 401,
+        "headers": {
+          "X-Request-ID": "99e276710f235c03e7fa14e7f454f134"
+        },
+        "body": {
+          "detail": "Not authenticated"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "path": "/evaluations",
+        "role": "recruiter"
+      },
+      "response": {
+        "status": 403,
+        "headers": {
+          "X-Request-ID": "9d752cc15cc1c9323e50eed5e7a8fdee"
+        },
+        "body": {
+          "detail": "Role 'recruiter' is not permitted to perform this action"
+        }
+      }
+    }
+  ]
+}

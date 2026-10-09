@@ -1,0 +1,145 @@
+{
+  "flow": "tool_calls",
+  "exchanges": [
+    {
+      "request_id": "1d9efccebf59d15eccb5555dd7f27eb0",
+      "query_id": "q1",
+      "tool_calls": [
+        {
+          "tool": "search_tickets",
+          "args": {
+            "query": "We keep getting rate limit errors on the API.",
+            "top_k": 3
+          },
+          "status": "ok",
+          "result_doc_ids": [
+            "T-3001"
+          ]
+        },
+        {
+          "tool": "get_ticket",
+          "args": {
+            "ticket_id": "T-3001"
+          },
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "request_id": "0b2840573afd2a8ea6dd23af08885711",
+      "query_id": "q2",
+      "tool_calls": [
+        {
+          "tool": "search_tickets",
+          "args": {
+            "query": "What is the status of my duplicate charge refund?",
+            "top_k": 3
+          },
+          "status": "ok",
+          "result_doc_ids": [
+            "T-4001",
+            "T-4002"
+          ]
+        },
+        {
+          "tool": "get_ticket",
+          "args": {
+            "ticket_id": "T-4001"
+          },
+          "status": "ok"
+        },
+        {
+          "tool": "get_ticket",
+          "args": {
+            "ticket_id": "T-4002"
+          },
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "request_id": "6cafaf11f934ac15d9aab83560e91a08",
+      "query_id": "q3",
+      "tool_calls": [
+        {
+          "tool": "search_tickets",
+          "args": {
+            "query": "Are there rules for refunds beyond 30 days?",
+            "top_k": 3
+          },
+          "status": "ok",
+          "result_doc_ids": [
+            "INT-900",
+            "KB-101"
+          ]
+        },
+        {
+          "tool": "get_ticket",
+          "args": {
+            "ticket_id": "INT-900"
+          },
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "request_id": "e45863207473ab54a8aff6b7a4a31700",
+      "query_id": "q4",
+      "tool_calls": [
+        {
+          "tool": "search_tickets",
+          "args": {
+            "query": "How do I turn on two-factor authentication?",
+            "top_k": 3
+          },
+          "status": "ok",
+          "result_doc_ids": [
+            "KB-103"
+          ]
+        }
+      ]
+    },
+    {
+      "request_id": "dafeb22eaa5db9b4ac88e7cfdc4a5db4",
+      "query_id": "q5",
+      "tool_calls": [
+        {
+          "tool": "search_tickets",
+          "args": {
+            "query": "Any known incident behind login problems?",
+            "top_k": 3
+          },
+          "status": "ok",
+          "result_doc_ids": [
+            "INT-901",
+            "T-2001"
+          ]
+        },
+        {
+          "tool": "get_ticket",
+          "args": {
+            "ticket_id": "INT-901"
+          },
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "request_id": "fbf0820568671cbd4299f1db822d542c",
+      "query_id": "q6",
+      "tool_calls": [
+        {
+          "tool": "search_tickets",
+          "args": {
+            "query": "How do I reset my password?",
+            "top_k": 3
+          },
+          "status": "ok",
+          "result_doc_ids": [
+            "KB-100"
+          ]
+        }
+      ]
+    }
+  ]
+}
