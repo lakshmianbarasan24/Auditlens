@@ -54,6 +54,15 @@ function renderDashboard(data) {
       <span class="meta-val">${prof.roles.map(r => `<span class="pill">${r}</span>`).join('')}</span>
     </div>
     <div class="meta-row">
+      <span class="meta-key">App Logging Health</span>
+      <span class="meta-val">
+        ${data.summary.app_logging && data.summary.app_logging.overall_logging_verified 
+          ? `<span class="pill" style="border: 1px solid var(--color-pass); color: var(--color-pass);">VERIFIED & INTACT</span> (${data.summary.app_logging.app_log_lines_count} log lines, ${data.summary.app_logging.audit_log_entries_count} audit events)` 
+          : `<span class="pill" style="border: 1px solid var(--color-block); color: var(--color-block);">FAILURES DETECTED</span> (${data.summary.app_logging?.app_log_lines_count || 0} log lines, Chain: ${data.summary.app_logging?.audit_chain_intact ? 'Intact' : 'Broken at entry #' + data.summary.app_logging?.broken_at})`
+        }
+      </span>
+    </div>
+    <div class="meta-row">
       <span class="meta-key">Policy Location</span>
       <span class="meta-val">${prof.policy_locations.map(p => `<span class="pill">${p}</span>`).join('')}</span>
     </div>

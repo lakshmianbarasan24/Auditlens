@@ -17,6 +17,11 @@ def print_report_summary(report):
     print(f"[ARCHITECTURE]: {prof.kind} | Audit Level: {prof.audit_level}")
     print(f"[DATA HANDLED]: {', '.join(prof.data_handled)}")
     print(f"[ACTIVE ROLES]: {', '.join(prof.roles)}")
+    app_log_info = report.summary.get("app_logging", {})
+    if app_log_info:
+        log_status_str = "ACTIVE & VERIFIED" if app_log_info.get("overall_logging_verified") else "ISSUES DETECTED"
+        chain_str = "Intact" if app_log_info.get("audit_chain_intact") else f"BROKEN (at #{app_log_info.get('broken_at')})"
+        print(f"[APP LOGGING ]: {log_status_str} (AppLogs: {app_log_info.get('app_log_lines_count', 0)} lines, AuditLogs: {app_log_info.get('audit_log_entries_count', 0)} events, Hash Chain: {chain_str})")
     print("-" * 90)
     
     score_color = "\033[92m" if report.score >= 85 else "\033[91m"
