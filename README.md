@@ -145,8 +145,9 @@ python run_audit.py
 Start the lightweight AuditLens Web Dashboard server:
 
 ```bash
-python auditlens/ui/dashboard.py
+python run_dashboard.py
 ```
+*(Or `python auditlens/ui/dashboard.py` from the root directory)*
 
 Then open **`http://localhost:8085/`** in your browser to interactively inspect findings, agent audit logs, and evidence chains across all 5 datasets!
 

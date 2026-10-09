@@ -1,7 +1,14 @@
 import os
+import sys
 import json
 import urllib.parse
 from http.server import HTTPServer, SimpleHTTPRequestHandler
+
+# Ensure project root is in sys.path
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
+
 from auditlens.adapters.package_adapter import SharePackageAdapter
 from auditlens.engine.audit_engine import AuditEngine
 
