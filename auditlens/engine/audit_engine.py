@@ -31,6 +31,8 @@ class AuditEngine:
     def __init__(self, pass_threshold: float = 85.0):
         self.pass_threshold = pass_threshold
         self.agent = AuditLensAgent()
+        self.adk_master = self.agent.adk_master_agent
+        self.release_gate_agent = self.agent.release_gate_agent
 
     def check_app_logging(self, adapter: BaseAdapter, dataset: str) -> Dict[str, Any]:
         """
@@ -101,8 +103,8 @@ class AuditEngine:
         # Step 1: Check target application logging health
         logging_status = self.check_app_logging(adapter, target_dataset)
 
-        # Step 2: Discover & Plan via Autonomous Agent
-        decisions, selected_tests = self.agent.evaluate_and_plan(profile, target_dataset)
+        # Step 2: Discover & Plan via Autonomous Agent (dynamic evaluator selection)
+        decisions, selected_tests = self.agent.evaluate_and_plan(profile, target_dataset, adapter=adapter)
         agent_audit_log = self.agent.create_agent_audit_log(run_id, profile.app_id, decisions)
         logger.info("Agent selected %d tests (Decision Log SHA-256: %s)", len(selected_tests), agent_audit_log.log_hash[:16])
 

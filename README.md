@@ -9,7 +9,7 @@ AuditLens is a unified, adapter-driven automated audit platform designed to eval
 ## 🌟 Key Features
 
 * 🔌 **Standard Adapter Interface (L1 - L4 Audit Levels)**: Connects seamlessly to REST APIs, OpenTelemetry traces, config specifications, or Docker sandbox environments.
-* 🤖 **Autonomous Agentic Auditor**: Reads application profiles (`application_profile.json`), dynamically selects required compliance & quality test suites, and records decision justifications in a tamper-evident audit log.
+* 🤖 **Autonomous Agentic Auditor (Google ADK)**: Powered by `google.adk` hierarchical multi-agents (Master Orchestrator + 6 specialized Sub-Agents). Dynamically selects required compliance & quality evaluators based on dataset flows and application profiles, recording tamper-evident SHA-256 decision logs.
 * 🔐 **Cryptographic Evidence Store**: Captures all requests, prompts, retrieved context chunks, model responses, tool calls, and app logs in an append-only, SHA-256 hash-chained immutable ledger.
 * 🛡️ **Comprehensive Compliance Checkers**:
   * **PII Scanner (`PII-01`, `PII-02`)**: Scans app logs, audit entries, and LLM prompt payloads for unmasked emails, phone numbers, and dates of birth (*GDPR Art. 5(1)(c), Art. 32*).
@@ -113,7 +113,8 @@ Capstone-3/
 │   │   ├── groundedness_evaluator.py # RAGAS Faithfulness quality evaluator
 │   │   └── prompt_injection_evaluator.py # OWASP LLM01 prompt injection hijack detector
 │   ├── agent/
-│   │   └── orchestrator.py           # Autonomous Audit Agent for test selection & decision audit log
+│   │   ├── orchestrator.py           # Autonomous Audit Agent for dynamic test selection & tamper-evident audit log
+│   │   └── adk_agents.py             # Google ADK (google.adk) multi-agent implementation (Master & 6 Sub-Agents)
 │   ├── engine/
 │   │   └── audit_engine.py           # Scoring engine (0-100) & CI release gate
 │   └── ui/
